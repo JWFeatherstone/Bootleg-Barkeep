@@ -2,6 +2,11 @@ body {
   background-color: #f8f4f0 ;
 }
 
+.title {
+  color: #f8f4f0;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
 
 .diamond-container {
   position: relative;
