@@ -23,7 +23,7 @@ const Home: React.FC<HomeProps> = ({ randomDrink }) => {
   return (
     <section className="home-page">
       {randomDrinkInfo}
-      <section>Some text.</section>
+      <section className="section-class">Some text.</section>
     </section>
   );
 };
