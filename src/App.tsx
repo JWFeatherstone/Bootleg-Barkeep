@@ -3,6 +3,8 @@ import './App.css';
 import Home from "./Components/Home/Home";
 import Header from "./Components/Header/Header";
 import { fetchRandom } from './apiCalls';
+import { DrinkGrid } from './Components/DrinkGrid/DrinkGrid';
+import { Route } from 'react-router-dom';
 
 interface AppState {
   randomDrink: any[];
@@ -37,8 +39,14 @@ class App extends Component<{}, AppState> {
     return (
       <main>
         <Header></Header>
-        <Home randomDrink={randomDrink} />
+        <Route exact path="/">
+          <Home randomDrink={randomDrink} />
+        </Route>
+        <Route exact path="/drinks/:alcohol">
+          <DrinkGrid />
+        </Route>
       </main>
+      
     );
   }
 }
