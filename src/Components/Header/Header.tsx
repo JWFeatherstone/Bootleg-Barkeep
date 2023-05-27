@@ -1,14 +1,12 @@
-import './Header.css';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import './Header.css';
+import { Route, NavLink } from 'react-router-dom';
 
 const Header: React.FC = () => {
   return (
     <header>
-      <img src="" alt="Bootleg Barkeep Logo" className="logo"/>
-      <h1>Bootleg Barkeep</h1>
+      <NavLink to="/" className="home-nav logo">Bootleg Barkeep</NavLink>
       <nav>
-        <NavLink to="/" className="home-nav">Home</NavLink>
         <NavLink to="/ingredient/whiskey" className="ingredient-nav">Whiskey</NavLink>
         <NavLink to="/ingredient/brandy" className="ingredient-nav">Brandy</NavLink>
         <NavLink to="/ingredient/vodka" className="ingredient-nav">Vodka</NavLink>

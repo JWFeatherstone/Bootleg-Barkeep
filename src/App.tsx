@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from "./Components/Home/Home";
+import Header from "./Components/Header/Header";
 import { fetchRandom } from './apiCalls';
 
 interface AppState {
@@ -34,7 +35,10 @@ class App extends Component<{}, AppState> {
   render() {
     const { randomDrink } = this.state;
     return (
-      <Home randomDrink={randomDrink} />
+      <main>
+        <Header></Header>
+        <Home randomDrink={randomDrink} />
+      </main>
     );
   }
 }
