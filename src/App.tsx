@@ -10,11 +10,13 @@ import { Route, Switch } from 'react-router-dom';
 const App = () => {
   const [randomDrink, setRandomDrink] = useState<Drink[]>([]);
   const [errorMsg, setErrorMsg] = useState<string>('');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const getRandomDrink = useCallback(async () => {
     try {
       const jsonData = await fetchRandom();
       setRandomDrink(jsonData.drinks);
+      setIsLoading(false);
     } catch (error) {
       if (error instanceof Error) {
         setErrorMsg(error.message);
@@ -26,7 +28,7 @@ const App = () => {
 
   useEffect(() => {
     getRandomDrink();
-  }, [getRandomDrink]);
+  }, []);
 
   return (
     <main>
