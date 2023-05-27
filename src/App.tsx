@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from "./Components/Home/Home";
+import { fetchRandom } from './Components/API/apiCalls';
 import Header from "./Components/Header/Header";
-import { fetchRandom } from './apiCalls';
 import { DrinkGrid } from './Components/DrinkGrid/DrinkGrid';
 import { Route } from 'react-router-dom';
 

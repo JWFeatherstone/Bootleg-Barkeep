@@ -1,20 +1,22 @@
 import React from "react";
 import "../Home/Home.css";
 import RandomDrink from "../RandomDrink/RandomDrink";
+import { cleanDrinkData } from "../API/utilities";
 import { Drink } from "../../Types/Drink";
-
 
 interface HomeProps {
   randomDrink: Drink[]; 
 }
 
 const Home: React.FC<HomeProps> = ({ randomDrink }) => {
-  const randomDrinkInfo = randomDrink.map(({ idDrink, strDrink, strDrinkThumb }) => (
+  const cleanedDrinkData = cleanDrinkData(randomDrink); 
+
+  const randomDrinkInfo = cleanedDrinkData.map(({ drinkId, randomImg, title }) => (
     <RandomDrink
-      drinkId={idDrink}
-      key={idDrink}
-      randomImg={strDrinkThumb}
-      title={strDrink}
+      drinkId={drinkId}
+      key={drinkId}
+      randomImg={randomImg}
+      title={title}
     />
   ));
 
