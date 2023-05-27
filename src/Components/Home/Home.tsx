@@ -23,9 +23,10 @@ const Home: React.FC<HomeProps> = ({ randomDrink }) => {
   ));
 
   return (
-    <div>
+    <section className="home-page">
       {randomDrinkInfo}
-    </div>
+      <section>Some text.</section>
+    </section>
   );
 };
 
