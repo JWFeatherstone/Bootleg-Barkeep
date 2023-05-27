@@ -9,14 +9,15 @@ interface RandomDrinkProps {
 
 const RandomDrink: React.FC<RandomDrinkProps> = ({ drinkId, randomImg, title }) => {
   return (
+    <>
+    <h2>Lucky Libations</h2>
     <div className="diamond-container">
       <div className="diamond-container-inner">
-        <h2>Lucky Libations</h2>
-        <h2 className="title">{title}</h2>
-        <img src={randomImg} alt={title} id={drinkId}/>
-        <h4>Try Something New</h4>
+        <img src={randomImg} alt={title} id={drinkId} />
       </div>
     </div>
+    <h2 className="title">{title}</h2>
+    </>
   );
 };
 
