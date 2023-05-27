@@ -1,12 +1,8 @@
 import React from "react";
 import "../Home/Home.css";
 import RandomDrink from "../RandomDrink/RandomDrink";
+import { Drink } from "../../Types/Drink";
 
-interface Drink {
-  idDrink: string;
-  strDrink: string;
-  strDrinkThumb: string;
-}
 
 interface HomeProps {
   randomDrink: Drink[]; 
