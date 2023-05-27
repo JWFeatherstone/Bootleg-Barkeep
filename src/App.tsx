@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Home from "./Components/Home/Home";
 import { fetchRandom } from './Components/API/apiCalls';
+import Header from "./Components/Header/Header";
+import { DrinkGrid } from './Components/DrinkGrid/DrinkGrid';
+import { Route } from 'react-router-dom';
 
 interface AppState {
   randomDrink: any[];
@@ -34,7 +37,16 @@ class App extends Component<{}, AppState> {
   render() {
     const { randomDrink } = this.state;
     return (
-      <Home randomDrink={randomDrink} />
+      <main>
+        <Header></Header>
+        <Route exact path="/">
+          <Home randomDrink={randomDrink} />
+        </Route>
+        <Route exact path="/drinks/:alcohol">
+          <DrinkGrid />
+        </Route>
+      </main>
+      
     );
   }
 }
