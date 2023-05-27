@@ -4,7 +4,6 @@ import { NavLink, useParams } from 'react-router-dom';
 import { DrinkCard } from '../DrinkCard/DrinkCard';
 import { Drink } from '../../Types/Drink';
 import { fetchCocktails } from '../../apiCalls';
-// import { Header } from '../../Header/Header';
 
 export const DrinkGrid = () => {
   const {alcohol} = useParams<{alcohol: string}>();
@@ -29,7 +28,6 @@ export const DrinkGrid = () => {
 
   return (
     <div>
-      {/* <Header /> */}
       <main className="drink-display">
         {drinkDisplay}
       </main>

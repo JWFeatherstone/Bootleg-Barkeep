@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from "./Components/Home/Home";
+import Header from "./Components/Header/Header";
 import { fetchRandom } from './apiCalls';
 import { DrinkGrid } from './Components/DrinkGrid/DrinkGrid';
 import { Route } from 'react-router-dom';
@@ -37,6 +38,7 @@ class App extends Component<{}, AppState> {
     const { randomDrink } = this.state;
     return (
       <main>
+        <Header></Header>
         <Route exact path="/">
           <Home randomDrink={randomDrink} />
         </Route>
