@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from "./Components/Home/Home";
-import { fetchRandom } from './apiCalls';
+import { fetchRandom } from './Components/API/apiCalls';
 
 interface AppState {
   randomDrink: any[];
