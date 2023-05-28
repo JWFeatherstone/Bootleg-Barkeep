@@ -3,7 +3,7 @@ import './DrinkGrid.css';
 import { NavLink, useParams } from 'react-router-dom';
 import { DrinkCard } from '../DrinkCard/DrinkCard';
 import { Drink } from '../../Types/Drink';
-import { fetchCocktails } from '../../apiCalls';
+import { fetchCocktails } from '../API/apiCalls';
 
 export const DrinkGrid = () => {
   const {alcohol} = useParams<{alcohol: string}>();
