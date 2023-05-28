@@ -13,10 +13,10 @@ const RandomDrink: React.FC<RandomDrinkProps> = ({ drinkId, randomImg, title }) 
     <h2>Lucky Libations</h2>
     <div className="diamond-container">
       <div className="diamond-container-inner">
-        <img src={randomImg} alt={title} id={drinkId} />
+        <img className="random-img" src={randomImg} alt={title} id={drinkId} />
       </div>
     </div>
-    <h2 className="title">{title}</h2>
+    <h2 className="title title-two">{title}</h2>
     </>
   );
 };

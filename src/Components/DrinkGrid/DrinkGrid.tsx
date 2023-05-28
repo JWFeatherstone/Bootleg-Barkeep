@@ -16,7 +16,7 @@ export const DrinkGrid = () => {
 
   const drinkDisplay = drinks.map(drink => {
     return (
-      <NavLink key={drink.idDrink} to={`/drink/${drink.idDrink}`} >
+      <NavLink className="drink-nav" key={drink.idDrink} to={`/drink/${drink.idDrink}`} >
         <DrinkCard 
           idDrink={drink.idDrink} 
           strDrinkThumb={drink.strDrinkThumb} 
@@ -26,8 +26,10 @@ export const DrinkGrid = () => {
     )
   })
 
+  let alcoholName = alcohol.charAt(0).toUpperCase() + alcohol.slice(1);
   return (
-    <div>
+    <div className="drink-wrapper">
+      <h1 className="drink-title">{`${alcoholName} Cocktails`}</h1>
       <main className="drink-display">
         {drinkDisplay}
       </main>
