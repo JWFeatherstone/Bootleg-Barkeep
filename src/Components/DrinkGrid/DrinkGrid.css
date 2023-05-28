@@ -1,0 +1,20 @@
+.drink-title {
+  text-align: center;
+  margin: 1em 0;
+}
+
+.drink-wrapper {
+  width: 100%;
+  grid-column: 1 / 6;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.drink-display {
+  display: grid;
+  grid-template-columns: repeat(3, 25em);
+  gap: 2em;
+  width: fit-content;
+  margin: auto;
+}
+

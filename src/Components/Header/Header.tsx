@@ -7,12 +7,12 @@ const Header: React.FC = () => {
     <header>
       <NavLink to="/" className="home-nav logo">Bootleg Barkeep</NavLink>
       <nav>
-        <NavLink to="/ingredient/whiskey" className="ingredient-nav">Whiskey</NavLink>
-        <NavLink to="/ingredient/brandy" className="ingredient-nav">Brandy</NavLink>
-        <NavLink to="/ingredient/vodka" className="ingredient-nav">Vodka</NavLink>
-        <NavLink to="/ingredient/gin" className="ingredient-nav">Gin</NavLink>
-        <NavLink to="/ingredient/rum" className="ingredient-nav">Rum</NavLink>
-        <NavLink to="/ingredient/tequila" className="ingredient-nav">Tequila</NavLink>
+        <NavLink to="/drinks/whiskey" className="ingredient-nav">Whiskey</NavLink>
+        <NavLink to="/drinks/brandy" className="ingredient-nav">Brandy</NavLink>
+        <NavLink to="/drinks/vodka" className="ingredient-nav">Vodka</NavLink>
+        <NavLink to="/drinks/gin" className="ingredient-nav">Gin</NavLink>
+        <NavLink to="/drinks/rum" className="ingredient-nav">Rum</NavLink>
+        <NavLink to="/drinks/tequila" className="ingredient-nav">Tequila</NavLink>
       </nav>
     </header>
   );
