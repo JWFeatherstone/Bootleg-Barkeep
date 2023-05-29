@@ -6,7 +6,8 @@ import Header from "./Components/Header/Header";
 import { Error } from "./Components/Error/Error";
 import { DrinkGrid } from './Components/DrinkGrid/DrinkGrid';
 import { Drink } from './Types/Drink';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import { error } from 'console';
 
 const App = () => {
   const [randomDrink, setRandomDrink] = useState<Drink[]>([]);
@@ -34,20 +35,26 @@ const App = () => {
 
   return (
     <>
-      {errorMsg ? (
-        <Error message={errorMsg}/>
-      ) : (
-      <main>
+    {(errorMsg) ? (
+      <Error message={errorMsg} />
+    ) : (
+    <Switch>
+      <Route exact path="/">
+        <main>
+          <Header />
+          <Home randomDrink={randomDrink} />
+        </main>
+      </Route>
+      <Route exact path="/drinks/:alcohol">
+        <main>
         <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home randomDrink={randomDrink} />
-          </Route>
-          <Route exact path="/drinks/:alcohol">
-            <DrinkGrid />
-          </Route>
-        </Switch>
-      </main>)}
+        <DrinkGrid />
+        </main>
+      </Route>
+      <Route exact path="/error">
+        <Error message={errorMsg} />
+      </Route>
+    </Switch>)}
     </>
   );
 }
