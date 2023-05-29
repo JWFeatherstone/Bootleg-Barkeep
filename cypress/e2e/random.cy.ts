@@ -13,7 +13,7 @@ describe('RandomDrink Component', () => {
       },
     }).as('randomDrink');
 
-    cy.visit('localhost:3001'); 
+    cy.visit('localhost:3000'); 
   });
 
   it('should display a random drink with title and image', () => {
