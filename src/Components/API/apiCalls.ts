@@ -1,4 +1,5 @@
 import { Drink } from "../../Types/Drink";
+import { Details } from "../../Types/Details"
 
 interface RandomResponse {
   drinks: Drink[];
@@ -24,7 +25,7 @@ const fetchCocktails = async (alcohol: string): Promise<Drink[]> => {
   };
 }
 
-const fetchDetails = (id: string): Promise<Drink[]> => {
+const fetchDetails = (id: string): Promise<Details> => {
   return fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
     .then(res => {
       if (!res.ok) {
