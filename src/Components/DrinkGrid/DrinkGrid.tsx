@@ -1,17 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import './DrinkGrid.css';
-import { NavLink, useParams } from 'react-router-dom';
+import { NavLink, useParams, Redirect } from 'react-router-dom';
 import { DrinkCard } from '../DrinkCard/DrinkCard';
 import { Drink } from '../../Types/Drink';
+import { Error } from '../Error/Error';
 import { fetchCocktails } from '../API/apiCalls';
 
 export const DrinkGrid = () => {
   const {alcohol} = useParams<{alcohol: string}>();
   const [drinks, setDrinks] = useState<Drink[]>([]);
+  const [errorMsg, setErrorMsg] = useState<string>('');
+
   useEffect(() => {
     fetchCocktails(alcohol).then(drinkData => {
       setDrinks(drinkData)
-    })
+    }).catch(error => {
+      if (error instanceof Error) {
+        setErrorMsg("Server error.");
+      } else {
+        setErrorMsg("Unknown error.");
+      }
+    }
+    )
   }, [alcohol]);
 
   const drinkDisplay = drinks.map(drink => {
@@ -28,11 +38,17 @@ export const DrinkGrid = () => {
 
   let alcoholName = alcohol.charAt(0).toUpperCase() + alcohol.slice(1);
   return (
+    <>
+    {errorMsg ? (
+      <Redirect to="/error" />
+    ) : (
     <div className="drink-wrapper">
       <h1 className="drink-title">{`${alcoholName} Cocktails`}</h1>
       <main className="drink-display">
         {drinkDisplay}
       </main>
     </div>
+    )}
+    </>
   )
 }
