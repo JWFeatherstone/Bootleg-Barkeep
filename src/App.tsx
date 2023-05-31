@@ -5,7 +5,9 @@ import { fetchRandom } from './Components/API/apiCalls';
 import Header from "./Components/Header/Header";
 import { Error } from "./Components/Error/Error";
 import { DrinkGrid } from './Components/DrinkGrid/DrinkGrid';
+import DrinkDetails from './Components/DrinkDetails/DrinkDetails';
 import { Drink } from './Types/Drink';
+import { Details } from './Types/Details';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { error } from 'console';
 
@@ -35,26 +37,32 @@ const App = () => {
 
   return (
     <>
-    {(errorMsg) ? (
-      <Error message={errorMsg} />
-    ) : (
-    <Switch>
-      <Route exact path="/">
-        <main>
-          <Header />
-          <Home randomDrink={randomDrink} />
-        </main>
-      </Route>
-      <Route exact path="/drinks/:alcohol">
-        <main>
-        <Header />
-        <DrinkGrid />
-        </main>
-      </Route>
-      <Route exact path="/error">
+      {(errorMsg) ? (
         <Error message={errorMsg} />
-      </Route>
-    </Switch>)}
+      ) : (
+        <Switch>
+          <Route exact path="/">
+            <main>
+              <Header />
+              <Home randomDrink={randomDrink} />
+            </main>
+          </Route>
+          <Route exact path="/drinks/:alcohol">
+            <main>
+              <Header />
+              <DrinkGrid />
+            </main>
+          </Route>
+          <Route exact path='/drink/:id'>
+            <main>
+              <Header />
+              <DrinkDetails />
+            </main>
+          </Route>
+          <Route exact path="/error">
+            <Error message={errorMsg} />
+          </Route>
+        </Switch>)}
     </>
   );
 }

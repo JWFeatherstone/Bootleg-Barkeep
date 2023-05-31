@@ -1,0 +1,26 @@
+.drink-details {
+    background-color: black;
+    border-radius: 3px;
+    height: 25em;
+    width: 25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-image {
+    height: 20em;
+    margin: .5em;
+    border-radius: 5px;
+}
+
+.detail-name {
+    color: #eebc70;
+    text-align: center;
+}
+
+.detail-nav {
+    text-decoration: none;
+    /* width: fit-content; */
+}
