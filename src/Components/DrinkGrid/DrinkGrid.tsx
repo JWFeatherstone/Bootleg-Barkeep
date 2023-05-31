@@ -3,7 +3,7 @@ import './DrinkGrid.css';
 import { NavLink, useParams, Redirect } from 'react-router-dom';
 import { DrinkCard } from '../DrinkCard/DrinkCard';
 import { Drink } from '../../Types/Drink';
-import { Error } from '../Error/Error';
+import { ErrorPage } from '../ErrorPage/ErrorPage';
 import { fetchCocktails } from '../API/apiCalls';
 
 export const DrinkGrid = () => {

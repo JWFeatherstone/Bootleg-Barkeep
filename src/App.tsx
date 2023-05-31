@@ -3,11 +3,10 @@ import './App.css';
 import Home from "./Components/Home/Home";
 import { fetchRandom } from './Components/API/apiCalls';
 import Header from "./Components/Header/Header";
-import { Error } from "./Components/Error/Error";
+import { ErrorPage } from "./Components/ErrorPage/ErrorPage";
 import { DrinkGrid } from './Components/DrinkGrid/DrinkGrid';
 import { Drink } from './Types/Drink';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import { error } from 'console';
 
 const App = () => {
   const [randomDrink, setRandomDrink] = useState<Drink[]>([]);
@@ -36,7 +35,7 @@ const App = () => {
   return (
     <>
     {(errorMsg) ? (
-      <Error message={errorMsg} />
+      <ErrorPage message={errorMsg} />
     ) : (
     <Switch>
       <Route exact path="/">
@@ -52,7 +51,7 @@ const App = () => {
         </main>
       </Route>
       <Route exact path="/error">
-        <Error message={errorMsg} />
+        <ErrorPage message={errorMsg} />
       </Route>
     </Switch>)}
     </>
