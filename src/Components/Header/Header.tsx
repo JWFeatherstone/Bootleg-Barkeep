@@ -2,17 +2,21 @@ import React from 'react';
 import './Header.css';
 import { Route, NavLink } from 'react-router-dom';
 
+
 const Header: React.FC = () => {
   return (
     <header>
-      <NavLink to="/" className="home-nav logo">Bootleg Barkeep</NavLink>
+      <div className="icon-border">
+        <div className="icon-backer"></div>
+        <NavLink to="/" className="home-nav"></NavLink>
+      </div>
       <nav>
-        <NavLink to="/drinks/whiskey" className="ingredient-nav">Whiskey</NavLink>
-        <NavLink to="/drinks/brandy" className="ingredient-nav">Brandy</NavLink>
-        <NavLink to="/drinks/vodka" className="ingredient-nav">Vodka</NavLink>
-        <NavLink to="/drinks/gin" className="ingredient-nav">Gin</NavLink>
-        <NavLink to="/drinks/rum" className="ingredient-nav">Rum</NavLink>
-        <NavLink to="/drinks/tequila" className="ingredient-nav">Tequila</NavLink>
+        <NavLink to="/drinks/whiskey" className="ingredient-nav first-nav" style={{ color: 'inherit', textDecoration: 'inherit'}}>WHISKEY</NavLink>
+        <NavLink to="/drinks/brandy" className="ingredient-nav" style={{ color: 'inherit', textDecoration: 'inherit'}}>BRANDY</NavLink>
+        <NavLink to="/drinks/vodka" className="ingredient-nav" style={{ color: 'inherit', textDecoration: 'inherit'}}>VODKA</NavLink>
+        <NavLink to="/drinks/gin" className="ingredient-nav" style={{ color: 'inherit', textDecoration: 'inherit'}}>GIN</NavLink>
+        <NavLink to="/drinks/rum" className="ingredient-nav" style={{ color: 'inherit', textDecoration: 'inherit'}}>RUM</NavLink>
+        <NavLink to="/drinks/tequila" className="ingredient-nav" style={{ color: 'inherit', textDecoration: 'inherit'}}>TEQUILA</NavLink>
       </nav>
     </header>
   );
