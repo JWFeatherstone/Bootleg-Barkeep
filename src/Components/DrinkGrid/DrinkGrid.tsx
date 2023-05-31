@@ -40,7 +40,7 @@ export const DrinkGrid = () => {
   return (
     <>
     {errorMsg ? (
-      <Redirect to="/error" />
+      <Redirect push to="/error" />
     ) : (
     <div className="drink-wrapper">
       <h1 className="drink-title">{`${alcoholName} Cocktails`}</h1>
