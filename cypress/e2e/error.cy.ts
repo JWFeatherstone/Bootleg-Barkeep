@@ -12,7 +12,7 @@ describe('error handling', () => {
       statusCode: 500
     })
   })
-  
+
   it('should display an error page when a randomized drink fails to fetch for the home page', () => {
     cy.visit('localhost:3000')
     cy.get('section').should('have.class', 'error-page')
@@ -23,12 +23,14 @@ describe('error handling', () => {
     cy.visit('localhost:3000/drinks/gin')
     cy.get('section').should('have.class', 'error-page')
     cy.get('.error-message').should('have.text', 'A server error occured while we were trying to fetch your cocktails. Please try again.')
+    cy.url().should('eq', 'http://localhost:3000/error')
   })
 
   it('should display an error page when the details for a specific cocktail fail to fetch', () => {
     cy.visit('localhost:3000/drinks/15346')
     cy.get('section').should('have.class', 'error-page')
     cy.get('.error-message').should('have.text', 'A server error occured while we were trying to fetch your cocktails. Please try again.')
+    cy.url().should('eq', 'http://localhost:3000/error')
   })
 })
 
