@@ -1,11 +1,11 @@
 import React from 'react';
-import './Error.css';
+import './ErrorPage.css';
 
 interface ErrorProps {
   message: string; 
 }
 
-export const Error: React.FC<ErrorProps> = ({message}) => {
+export const ErrorPage: React.FC<ErrorProps> = ({message}) => {
   return (
     <section className = "error-page">
       <div className="error-frame">
