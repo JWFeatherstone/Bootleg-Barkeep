@@ -7,7 +7,7 @@ const Header: React.FC = () => {
     <header>
       <NavLink to="/" className="home-nav logo">Bootleg Barkeep</NavLink>
       <nav>
-        <NavLink to="/drinks/whiskey" className="ingredient-nav">Whiskey</NavLink>
+        <NavLink to="/drinks/scotch" className="ingredient-nav">Scotch</NavLink>
         <NavLink to="/drinks/brandy" className="ingredient-nav">Brandy</NavLink>
         <NavLink to="/drinks/vodka" className="ingredient-nav">Vodka</NavLink>
         <NavLink to="/drinks/gin" className="ingredient-nav">Gin</NavLink>
