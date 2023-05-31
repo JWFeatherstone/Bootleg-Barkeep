@@ -1,25 +1,52 @@
 .drink-card {
-  background-color:black;
+  background: url("src/Assets/CardBacker.svg");
   border-radius: 3px;
-  height: 25em;
-  width: 25em;
+  height: 22em;
+  width: 19em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .drink-image {
-  height: 20em;
+  height: 16em;
   margin: .5em;
   border-radius: 5px;
 }
 
 .drink-name {
   color: #eebc70;
+  font-size: 1.25em;
   text-align: center;
 }
 
 .drink-nav {
   text-decoration: none;
-  /* width: fit-content; */
+}
+
+.drink-display {
+  background-color: #F8F4F0;
+}
+
+/* .drink-wrapper {
+  border: #eebc70 solid 1px;
+} */
+
+.title-wrapper {
+  display: flex;
+  justify-content: center;
+  border: #eebc70 double;
+  margin: 1em;
+}
+
+.drink-title {
+  margin-left: .25em;
+  padding: 0 .25em;
+  border: #eebc70 solid 1px;
+  font-weight: 600;
+}
+
+.drink-title-two {
+  border: #eebc70 double;
+  font-weight: 700;
 }
