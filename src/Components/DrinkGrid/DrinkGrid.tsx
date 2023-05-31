@@ -43,7 +43,10 @@ export const DrinkGrid = () => {
       <Redirect to="/error" />
     ) : (
     <div className="drink-wrapper">
-      <h1 className="drink-title">{`${alcoholName} Cocktails`}</h1>
+      <div className="title-wrapper">
+      <h1 className="drink-title">{`${alcoholName}`}</h1>
+      <h1 className="drink-title drink-title-two">Cocktails</h1>
+      </div>
       <main className="drink-display">
         {drinkDisplay}
       </main>
