@@ -35,7 +35,7 @@ class DrinkDetails extends Component<any, any> {
             <div id={id} className="drink-details">
                 <div className="left-side">
                     <h2 className="detail-name">{this.state.drink.strDrink}</h2>
-                    <img className="detail-image" src={this.state.drink.image} alt={this.state.drink.strDrink} />
+                    <img className="detail-image" src={this.state.drink.strDrinkThumb} alt={this.state.drink.strDrink} />
                 </div>
                 <div className="right-side">
                     <h4 className="glass">{this.state.drink.strGlass}</h4>
