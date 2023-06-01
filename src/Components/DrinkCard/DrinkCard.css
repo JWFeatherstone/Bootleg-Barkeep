@@ -21,13 +21,17 @@ body{
 }
 
 .drink-name {
-  color: #181C1E;
+  color: #eebc70;
   font-size: 1.25em;
   text-align: center;
+  text-decoration: none;
+}
+
+.drink-card-nav {
+  text-decoration: none;
 }
 
 .drink-nav {
-  text-decoration: none;
   height: fit-content;
 }
 

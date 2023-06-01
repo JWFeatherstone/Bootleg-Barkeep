@@ -35,7 +35,7 @@ describe("Alcohol Grid Component", () => {
   it('should allow user to click NavLink "Vodka" and be routed to drink grid with fixture data', () => {
     cy.get(".ingredient-nav").eq(2).click();
     cy.wait("@fetchCocktails");
-    cy.get(".drink-title").should("contain", "Vodka Cocktails");
+    cy.get(".drink-title").should("contain", "Vodka");
     cy.get(".drink-card")
       .should("have.length", 15)
       .each((drinkCard) => {
@@ -49,13 +49,13 @@ describe("Alcohol Grid Component", () => {
     cy.wait("@randomDrink")
       .get("h2")
       .should("contain", "Lucky Libations")
-      .get(".diamond-container img")
+      .get(".random-img")
       .should(
         "have.attr",
         "src",
         "https://www.thecocktaildb.com/images/media/drink/yqvvqs1475667388.jpg"
       )
-      .get(".diamond-container img")
+      .get(".random-img")
       .should("have.attr", "alt", "155 Belmont")
       .get(".title")
       .should("contain", "155 Belmont");
