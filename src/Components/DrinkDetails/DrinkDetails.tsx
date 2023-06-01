@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../DrinkDetails/DrinkDetails.css';
 import { fetchDetails } from '../API/apiCalls';
 import { Details } from "../../Types/Details"
-import { Error } from '../Error/Error';
+import { ErrorPage } from '../ErrorPage/ErrorPage';
 import { useParams } from 'react-router-dom'
 
 

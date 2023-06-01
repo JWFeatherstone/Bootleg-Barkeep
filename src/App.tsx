@@ -7,12 +7,10 @@ import { ErrorPage } from "./Components/ErrorPage/ErrorPage";
 import { DrinkGrid } from './Components/DrinkGrid/DrinkGrid';
 import DrinkDetails from './Components/DrinkDetails/DrinkDetails';
 import { Drink } from './Types/Drink';
-
 import { Details } from './Types/Details';
 import { Route, Switch, Redirect, useParams } from 'react-router-dom';
 import { error } from 'console';
 
-import { Route, Switch, Redirect } from 'react-router-dom';
 
 
 const App = () => {
