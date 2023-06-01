@@ -11,7 +11,7 @@ const Header: React.FC = () => {
         <NavLink to="/" className="home-nav"></NavLink>
       </div>
       <nav>
-        <NavLink to="/drinks/whiskey" className="ingredient-nav first-nav" style={{ color: 'inherit', textDecoration: 'inherit'}}>WHISKEY</NavLink>
+        <NavLink to="/drinks/scotch" className="ingredient-nav first-nav" style={{ color: 'inherit', textDecoration: 'inherit'}}>SCOTCH</NavLink>
         <NavLink to="/drinks/brandy" className="ingredient-nav" style={{ color: 'inherit', textDecoration: 'inherit'}}>BRANDY</NavLink>
         <NavLink to="/drinks/vodka" className="ingredient-nav" style={{ color: 'inherit', textDecoration: 'inherit'}}>VODKA</NavLink>
         <NavLink to="/drinks/gin" className="ingredient-nav" style={{ color: 'inherit', textDecoration: 'inherit'}}>GIN</NavLink>
