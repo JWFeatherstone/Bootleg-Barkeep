@@ -1,6 +1,6 @@
 .drink-title {
   text-align: center;
-  margin: 1em 0;
+  margin-bottom: 0;
 }
 
 .drink-wrapper {
@@ -8,13 +8,19 @@
   grid-column: 1 / 6;
   flex-wrap: wrap;
   justify-content: center;
+  height: fit-content;
+  padding-bottom: 1em;
 }
 
 .drink-display {
   display: grid;
-  grid-template-columns: repeat(3, 25em);
+  grid-template-columns: repeat(3, 19em);
+  grid-template-rows: unset;
   gap: 2em;
   width: fit-content;
   margin: auto;
+  height: 100%;
+  padding: 3em 9em;
+  border: #eebc70 solid 1px;
 }
 
