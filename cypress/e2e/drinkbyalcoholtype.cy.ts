@@ -60,4 +60,23 @@ describe("Alcohol Grid Component", () => {
       .get(".title")
       .should("contain", "155 Belmont");
   });
+
+  it("should navigate back to the previous page when the back button is clicked", () => {
+    cy.get(".ingredient-nav").eq(2).click();
+    cy.wait("@fetchCocktails");
+  
+    cy.get(".drink-title").should("contain", "Vodka");
+  
+    cy.go("back");
+  
+    cy.wait("@randomDrink");
+    cy.get("h2").should("contain", "Lucky Libations");
+    cy.get(".random-img").should(
+      "have.attr",
+      "src",
+      "https://www.thecocktaildb.com/images/media/drink/yqvvqs1475667388.jpg"
+    );
+    cy.get(".random-img").should("have.attr", "alt", "155 Belmont");
+    cy.get(".title").should("contain", "155 Belmont");
+  });
 });
