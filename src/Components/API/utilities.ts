@@ -6,6 +6,13 @@ export const cleanDrinkData = (drinkData: Drink[]): { drinkId: string; randomImg
     .map(({ idDrink, strDrink, strDrinkThumb }: Drink) => ({
       drinkId: idDrink,
       randomImg: strDrinkThumb,
-      title: strDrink,
+      title: capitalizeTitle(strDrink),
     }));
+};
+
+const capitalizeTitle = (title: string): string => {
+  return title
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 };

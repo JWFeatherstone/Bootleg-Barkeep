@@ -44,7 +44,6 @@ header {
   width: 90px;
   position: absolute;
   top: -39px;
-  background-color: #f8f4f0;
 }
 
 nav {
@@ -86,5 +85,5 @@ nav {
   left: 4px;
   right: 4px;
   bottom: 4px;
-  border: 1px solid #EEBC70;
+  border: 1px #EEBC70 dotted;
 }
