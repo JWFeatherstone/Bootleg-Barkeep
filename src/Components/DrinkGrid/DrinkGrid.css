@@ -6,6 +6,7 @@
 .drink-wrapper {
   width: 100%;
   grid-column: 1 / 6;
+  grid-row: 2/4;
   flex-wrap: wrap;
   justify-content: center;
   height: fit-content;

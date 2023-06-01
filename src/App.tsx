@@ -5,8 +5,15 @@ import { fetchRandom } from './Components/API/apiCalls';
 import Header from "./Components/Header/Header";
 import { ErrorPage } from "./Components/ErrorPage/ErrorPage";
 import { DrinkGrid } from './Components/DrinkGrid/DrinkGrid';
+import DrinkDetails from './Components/DrinkDetails/DrinkDetails';
 import { Drink } from './Types/Drink';
+
+import { Details } from './Types/Details';
+import { Route, Switch, Redirect, useParams } from 'react-router-dom';
+import { error } from 'console';
+
 import { Route, Switch, Redirect } from 'react-router-dom';
+
 
 const App = () => {
   const [randomDrink, setRandomDrink] = useState<Drink[]>([]);
@@ -34,26 +41,38 @@ const App = () => {
 
   return (
     <>
-    {(errorMsg) ? (
-      <ErrorPage message={errorMsg} />
-    ) : (
-    <Switch>
-      <Route exact path="/">
-        <main>
-          <Header />
-          <Home randomDrink={randomDrink} />
-        </main>
-      </Route>
-      <Route exact path="/drinks/:alcohol">
-        <main>
-        <Header />
-        <DrinkGrid />
-        </main>
-      </Route>
-      <Route exact path="/error">
+
+      {(errorMsg) ? (
         <ErrorPage message={errorMsg} />
-      </Route>
-    </Switch>)}
+      ) : (
+        <Switch>
+          <Route exact path="/">
+            <main>
+              <Header />
+              <Home randomDrink={randomDrink} />
+            </main>
+          </Route>
+          <Route exact path="/drinks/:alcohol">
+            <main>
+              <Header />
+              <DrinkGrid />
+            </main>
+          </Route>
+          <Route exact path='/drink/:id' render={({ match }) => (
+            <main>
+              <Header />
+
+              <DrinkDetails id={match.params.id} />
+            </main>
+
+          )} />
+          {/* </Route> */}
+          <Route exact path="/error">
+            <ErrorPage message={errorMsg} />
+          </Route>
+        </Switch >)
+      }
+
     </>
   );
 }
