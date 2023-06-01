@@ -3,7 +3,7 @@ import './DrinkGrid.css';
 import { NavLink, useParams, Redirect } from 'react-router-dom';
 import { DrinkCard } from '../DrinkCard/DrinkCard';
 import { Drink } from '../../Types/Drink';
-import { Error } from '../Error/Error';
+import { ErrorPage } from '../ErrorPage/ErrorPage';
 import { fetchCocktails } from '../API/apiCalls';
 
 export const DrinkGrid = () => {
@@ -39,16 +39,18 @@ export const DrinkGrid = () => {
   let alcoholName = alcohol.charAt(0).toUpperCase() + alcohol.slice(1);
   return (
     <>
-      {errorMsg ? (
-        <Redirect to="/error" />
-      ) : (
-        <div className="drink-wrapper">
-          <h1 className="drink-title">{`${alcoholName} Cocktails`}</h1>
-          <main className="drink-display">
-            {drinkDisplay}
-          </main>
-        </div>
-      )}
+
+    {errorMsg ? (
+      <Redirect push to="/error" />
+    ) : (
+    <div className="drink-wrapper">
+      <h1 className="drink-title">{`${alcoholName} Cocktails`}</h1>
+      <main className="drink-display">
+        {drinkDisplay}
+      </main>
+    </div>
+    )}
+
     </>
   )
 }
