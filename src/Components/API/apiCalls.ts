@@ -25,15 +25,13 @@ const fetchCocktails = async (alcohol: string): Promise<Drink[]> => {
   };
 }
 
-const fetchDetails = (id: string): Promise<Details> => {
-  return fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
-    .then(res => {
-      if (!res.ok) {
-        throw new Error(`Please try again there is an error. code: ${res.status}`)
-      } else {
-        return res.json()
-      }
-    })
+const fetchDetails = async (id: string): Promise<Details> => {
+  const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
+  if (response.ok) {
+    return (await response.json()).drinks[0];
+  } else {
+    throw new Error(`Please try again there is an error. code: ${response.status}`)
+  };
 }
 
 
