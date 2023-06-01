@@ -1,19 +1,14 @@
 import { Drink } from "../../Types/Drink";
 import { Details } from "../../Types/Details"
 
-interface RandomResponse {
-  drinks: Drink[];
-}
 
-const fetchRandom = (): Promise<RandomResponse> => {
-  return fetch(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
-    .then(res => {
-      if (!res.ok) {
-        throw new Error(`Please try again there is an error. code: ${res.status}`)
+const fetchRandom = async (): Promise<Drink[]> => {
+  const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/random.php`);
+      if (response.ok) {
+        return (await response.json()).drinks;
       } else {
-        return res.json() as Promise<RandomResponse>
+        throw new Error(`Please try again there is an error. code: ${response.status}`)
       };
-    });
 };
 
 const fetchCocktails = async (alcohol: string): Promise<Drink[]> => {

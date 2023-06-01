@@ -22,7 +22,7 @@ const App = () => {
     try {
       setIsLoading(true);
       const jsonData = await fetchRandom();
-      setRandomDrink(jsonData.drinks);
+      setRandomDrink(jsonData);
       setIsLoading(false);
     } catch (error) {
       if (error instanceof Error) {
