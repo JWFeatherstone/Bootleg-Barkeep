@@ -8,7 +8,7 @@ import { DrinkGrid } from './Components/DrinkGrid/DrinkGrid';
 import DrinkDetails from './Components/DrinkDetails/DrinkDetails';
 import { Drink } from './Types/Drink';
 import { Details } from './Types/Details';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect, useParams } from 'react-router-dom';
 import { error } from 'console';
 
 const App = () => {
@@ -53,16 +53,20 @@ const App = () => {
               <DrinkGrid />
             </main>
           </Route>
-          <Route exact path='/drink/:id'>
+          <Route exact path='/drink/:id' render={({ match }) => (
             <main>
               <Header />
-              <DrinkDetails />
+
+              <DrinkDetails id={match.params.id} />
             </main>
-          </Route>
+
+          )} />
+          {/* </Route> */}
           <Route exact path="/error">
             <Error message={errorMsg} />
           </Route>
-        </Switch>)}
+        </Switch >)
+      }
     </>
   );
 }
