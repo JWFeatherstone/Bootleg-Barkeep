@@ -20,8 +20,8 @@ describe('RandomDrink Component', () => {
     cy.wait('@randomDrink')
 
     .get('h2').should('contain', 'Lucky Libations')
-    .get('.diamond-container img').should('have.attr', 'src', 'https://www.thecocktaildb.com/images/media/drink/yqvvqs1475667388.jpg')
-    .get('.diamond-container img').should('have.attr', 'alt', '155 Belmont')
+    .get('.random-img').should('have.attr', 'src', 'https://www.thecocktaildb.com/images/media/drink/yqvvqs1475667388.jpg')
+    .get('.random-img').should('have.attr', 'alt', '155 Belmont')
     .get('.title').should('contain', '155 Belmont');
   });
 });

@@ -21,8 +21,8 @@ describe('Home Component', () => {
       cy.wait('@randomDrink');
 
       cy.get('.home-page h2').should('contain', 'Lucky Libations')
-      .get('.home-page .diamond-container img').should('have.attr', 'src', 'https://www.thecocktaildb.com/images/media/drink/yqvvqs1475667388.jpg')
-      .get('.home-page .diamond-container img').should('have.attr', 'alt', '155 Belmont')
+      .get('.home-page .random-img').should('have.attr', 'src', 'https://www.thecocktaildb.com/images/media/drink/yqvvqs1475667388.jpg')
+      .get('.home-page .random-img').should('have.attr', 'alt', '155 Belmont')
       .get('.home-page .title').should('contain', '155 Belmont');
     });
   });
@@ -37,10 +37,10 @@ describe('Home Component', () => {
       cy.visit('localhost:3000');
     });
 
-    it('should not display random drink', () => {
+    it('should display error page', () => {
       cy.wait('@randomDrink');
 
-      cy.get('.home-page').should('not.contain', 'Lucky Libations');
+      cy.get('.error-page').should('contain', 'A server error occured');
     });
   });
 });

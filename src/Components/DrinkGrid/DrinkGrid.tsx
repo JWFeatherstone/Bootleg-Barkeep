@@ -26,13 +26,11 @@ export const DrinkGrid = () => {
 
   const drinkDisplay = drinks.map(drink => {
     return (
-      <NavLink className="drink-nav" key={drink.idDrink} to={`/drink/${drink.idDrink}`} >
         <DrinkCard
           idDrink={drink.idDrink}
           strDrinkThumb={drink.strDrinkThumb}
           strDrink={drink.strDrink}
         />
-      </NavLink>
     )
   })
 
