@@ -5,8 +5,6 @@ import { Details } from "../../Types/Details"
 import { ErrorPage } from '../ErrorPage/ErrorPage';
 import { useParams } from 'react-router-dom'
 
-
-
 class DrinkDetails extends Component<any, any> {
     constructor(props: any) {
         super(props);
@@ -46,8 +44,6 @@ class DrinkDetails extends Component<any, any> {
         )
     }
 }
-
-
 
 export default DrinkDetails
 

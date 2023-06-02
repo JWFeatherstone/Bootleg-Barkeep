@@ -1,6 +1,7 @@
+import { RandomDrinkProps } from 'src/Types/RandomDrinkProps';
 import { Drink } from '../../Types/Drink';
 
-export const cleanDrinkData = (drinkData: Drink[]): { drinkId: string; randomImg: string; title: string }[] => {
+export const cleanDrinkData = (drinkData: Drink[]): RandomDrinkProps[] => {
   return drinkData
     .filter((drink: Drink) => drink.idDrink && drink.strDrink && drink.strDrinkThumb)
     .map(({ idDrink, strDrink, strDrinkThumb }: Drink) => ({

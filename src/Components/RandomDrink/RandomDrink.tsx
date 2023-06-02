@@ -1,13 +1,8 @@
 import React from "react";
 import "../RandomDrink/RandomDrink.css";
+import { Drink } from "src/Types/Drink";
 
-interface RandomDrinkProps {
-  drinkId: string;
-  randomImg: string;
-  title: string;
-}
-
-const RandomDrink: React.FC<RandomDrinkProps> = ({ drinkId, randomImg, title }) => {
+const RandomDrink: React.FC<Drink> = ({ strDrink, strDrinkThumb, idDrink }) => {
   return (
     <>
     <div className="random-page-wrapper">
@@ -15,9 +10,9 @@ const RandomDrink: React.FC<RandomDrinkProps> = ({ drinkId, randomImg, title }) 
     <h2 className="lucky">Lucky Libations</h2>
     </div>
       <div className="random-container">
-        <img className="random-img" src={randomImg} alt={title} id={drinkId} />
+        <img className="random-img" src={strDrinkThumb} alt={strDrink} id={idDrink} />
         
-        <h2 className="title title-two">{title}</h2>
+        <h2 className="title title-two">{strDrink}</h2>
        
       </div>
       </div>
