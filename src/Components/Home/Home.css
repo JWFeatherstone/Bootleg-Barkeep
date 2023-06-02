@@ -5,12 +5,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+
 }
 
-.section-class {
-  position: absolute;
-  right: 25%; 
-  top: 50%;
-  transform: translateY(-50%);
+.random-quote {
+ margin-left: 3em;
 }
