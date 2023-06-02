@@ -62,8 +62,6 @@ class DrinkDetails extends Component<any, any> {
     }
 }
 
-
-
 export default DrinkDetails
 
 
