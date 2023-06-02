@@ -95,25 +95,6 @@ describe("Drink Grid Vodka", () => {
       .should("contain", "Loch Lomond");
   });
 
-  it("should navigate back to the previous page when the back button is clicked", () => {
-    cy.get(".ingredient-nav").eq(2).click();
-    cy.wait("@vodkaCocktails");
-
-    cy.get(".drink-title").should("contain", "Vodka");
-
-    cy.go("back");
-
-    cy.wait("@randomDrink");
-    cy.get("h2").should("contain", "Lucky Libations");
-    cy.get(".random-img").should(
-      "have.attr",
-      "src",
-      "https://www.thecocktaildb.com/images/media/drink/rpvtpr1468923881.jpg"
-    );
-    cy.get(".random-img").should("have.attr", "alt", "Loch Lomond");
-    cy.get(".title").should("contain", "Loch Lomond");
-  });
-
   it("should navigate to detailed view of first drink on grid and show detailed view", () => {
     cy.get(".ingredient-nav").eq(2).click();
     cy.wait("@vodkaCocktails");
@@ -142,14 +123,13 @@ describe("Drink Grid Vodka", () => {
       "have.attr",
       "src",
       "https://www.thecocktaildb.com/images/media/drink/tpxurs1454513016.jpg"
-      );
-      cy.get(".home-nav").click();
+    );
+    cy.get(".home-nav").click();
   });
-
 
   it("should navigate back to the previous page when the back button is clicked", () => {
     cy.get(".ingredient-nav").eq(2).click();
-    cy.wait("@vodkaCocktails"); 
+    cy.wait("@vodkaCocktails");
 
     cy.get(".drink-title").should("contain", "Vodka");
 

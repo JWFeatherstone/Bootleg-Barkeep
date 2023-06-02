@@ -35,11 +35,12 @@ describe("Drink Grid Gin", () => {
           drinks: [
             {
               strDrink: "69 Special",
-              strDrinkThumb: "https://www.thecocktaildb.com/images/media/drink/vqyxqx1472669095.jpg",
-              idDrink: "13940"
-            }
-          ]
-        }
+              strDrinkThumb:
+                "https://www.thecocktaildb.com/images/media/drink/vqyxqx1472669095.jpg",
+              idDrink: "13940",
+            },
+          ],
+        },
       }
     ).as("ginCocktail1");
     cy.intercept(
@@ -51,17 +52,18 @@ describe("Drink Grid Gin", () => {
           drinks: [
             {
               strDrink: "Alexander",
-              strDrinkThumb: "https://www.thecocktaildb.com/images/media/drink/0clus51606772388.jpg",
-              idDrink: "11014"
-            }
-          ]
-        }
+              strDrinkThumb:
+                "https://www.thecocktaildb.com/images/media/drink/0clus51606772388.jpg",
+              idDrink: "11014",
+            },
+          ],
+        },
       }
     ).as("ginCocktail2");
     cy.visit("localhost:3000");
   });
 
-  it('should allow user to click NavLink "Vodka" and be routed to drink grid with fixture data', () => {
+  it('should allow user to click NavLink "Gin" and be routed to drink grid with fixture data', () => {
     cy.get(".ingredient-nav").eq(3).click();
     cy.wait("@ginCocktails");
     cy.get(".drink-title").should("contain", "Gin");
