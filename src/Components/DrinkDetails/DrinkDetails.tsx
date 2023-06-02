@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 import '../DrinkDetails/DrinkDetails.css';
 import { fetchDetails } from '../API/apiCalls';
-import { Details } from "../../Types/Details"
-import { ErrorPage } from '../ErrorPage/ErrorPage';
-import { useParams } from 'react-router-dom'
+// import { Details } from "../../Types/Details"
+// import { ErrorPage } from '../ErrorPage/ErrorPage';
+// import { useParams } from 'react-router-dom'
+
 
 class DrinkDetails extends Component<any, any> {
     constructor(props: any) {
         super(props);
         this.state = {
-            drink: {},
+            drink: {}
         }
     }
 
@@ -26,7 +27,21 @@ class DrinkDetails extends Component<any, any> {
         })
     }
 
+
     render() {
+        const { drink } = this.state;
+        const ingredients: string[] = [];
+        for (let i = 1; i <= 15; i++) {
+            const ingredientKey = `strIngredient${i}`;
+            const measureKey = `strMeasure${i}`;
+
+            if (drink[ingredientKey] !== null) {
+                const ingredient = drink[ingredientKey];
+                const measure = drink[measureKey] || '';
+                ingredients.push(ingredient + ' ' + measure);
+            }
+        }
+
 
         const { id } = this.props
         return (
@@ -37,7 +52,9 @@ class DrinkDetails extends Component<any, any> {
                 </div>
                 <div className="right-side">
                     <h4 className="glass">{this.state.drink.strGlass}</h4>
-                    <p className="ingredients">{this.state.drink.strIngredient1}{this.state.drink.strMeasure1}</p>
+                    {ingredients.map((ingredient, index) => (
+                        <p className="ingredients" key={index}>{ingredient}</p>
+                    ))}
                     <p className="instructions">{this.state.drink.strInstructions}</p>
                 </div>
             </div>
