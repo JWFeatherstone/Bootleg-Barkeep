@@ -39,13 +39,6 @@ header {
   cursor: pointer;
 }
 
-.icon-backer {
-  height: 75px;
-  width: 90px;
-  position: absolute;
-  top: -39px;
-}
-
 nav {
   grid-column: 1 / 4;
   grid-row: 2;
@@ -66,6 +59,7 @@ nav {
   margin-left: 1px;
   font-family : ITC Avant Garde Gothic Pro;
   font-size : 1rem;
+  color: white;
 }
 
 .first-nav {

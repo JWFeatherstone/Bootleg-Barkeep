@@ -34,7 +34,7 @@ export const DrinkGrid = () => {
     )
   })
 
-  let alcoholName = alcohol.charAt(0).toUpperCase() + alcohol.slice(1);
+  let title = alcohol.charAt(0).toUpperCase() + alcohol.slice(1) + " Cocktails";
   return (
     <>
 
@@ -43,8 +43,7 @@ export const DrinkGrid = () => {
     ) : (
     <div className="drink-wrapper">
       <div className="title-wrapper">
-      <h1 className="drink-title">{`${alcoholName}`}</h1>
-      <h1 className="drink-title drink-title-two">Cocktails</h1>
+      <h1 className="drink-title">{title}</h1>
       </div>
       <main className="drink-display">
         {drinkDisplay}
