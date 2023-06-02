@@ -39,18 +39,11 @@ body{
 .title-wrapper {
   display: flex;
   justify-content: center;
-  margin: 1em 1em 0 1em;
+  margin: 1.5em 0;
 }
 
 .drink-title {
-  margin-left: .25em;
-  padding: 0 .25em;
-  border: #eebc70 solid 1px;
-  font-weight: 600;
   color: #eebc70;
-}
-
-.drink-title-two {
-  border: #eebc70 double;
-  font-weight: 700;
+  font-family : ITC Serif Gothic Std;
+  padding: 0.3em 0.5em;
 }
