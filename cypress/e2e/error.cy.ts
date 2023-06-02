@@ -8,7 +8,7 @@ describe('error handling', () => {
       statusCode: 500
     })
 
-    cy.intercept('GET', 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=15346', {
+    cy.intercept('GET', 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=15346', {
       statusCode: 500
     })
   })
