@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# Bootleg Barkeep
+## Abstract
+Bootleg Barkeep is a Prohibition-era themed cocktail app that presents the user with the ability to search for cocktails by their base alcohol type, to see a given cocktails' ingredients and preparation instructions, and that provides the user with randomized suggestions of drinks to try.
+## Project Background
+This web application was developed for the Turing School of Software and Design's Mod 3 Stretch Tech project. Students were given license to research and implement a technology, not otherwise addressed within the program's curriculum, over the course of ten days. For this project, the contributors chose to integrate TypeScript, a type-safe superset of JavaScript.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Cocktail data for the project was accessed from the public [Cocktail DB API](https://www.thecocktaildb.com/api.php). 
+## Technologies
+  - Typescript
+  - React
+  - CSS & HTML
+  - Webpack module bundler
+  - Cypress end-to-end testing framework
+  - Postman (for API request testing)
+  - GitHub Projects
+  - Figma and Adobe Illustrator for wireframing
+## Contributors
+  - Adriane Sutherland - [GitHub](https://github.com/asutherland91) [LinkedIn](https://www.linkedin.com/in/adrianesutherland/)
+  - Kelli Watkins - [Github](https://github.com/klwats) [LinkedIn](https://www.linkedin.com/in/kelli-watkins-1b73418b/)
+  - Ashlee Webb - [GitHub](https://github.com/AshleeAWebb) [LinkedIn](https://www.linkedin.com/in/ashlee-webb/)
+  - John Featherstone - [GitHub](https://github.com/JWFeatherstone) [LinkedIn](https://www.linkedin.com/in/john-w-featherstone/)
+## Project Specification
+[Project Spec and Rubric](https://frontend.turing.edu/projects/module-3/stretch.html)
+## Reflections
+### Wins
+...
+### Challenges, Lessons Learned & Potential Improvements
+...
+## Set Up
+### Option 1: Visit the Deployed Site
+Here.
+### Option 2: Installing the Repository Locally
+1. Fork [this](https://github.com/JWFeatherstone/bootleg-barkeep) repository to your GitHub account.
+1. Copy SSH key on GitHub inside the code dropdown.
+1. Using the terminal, run git clone [SSH key here].
+1. cd into the repository.
+1. Open the repository in your text editor.
+1. Run npm install
+1. Run npm start
+1. Click the hyperlink where the project is running to launch the application in the web browser, or enter http://localhost:3000/ into your web browser.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
