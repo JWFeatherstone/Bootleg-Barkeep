@@ -1,5 +1,5 @@
 body{
-  background-color: #181C1E;
+  background-image: url("src/Assets/hotel-wallpaper.png");
 }
 
 .drink-card {
@@ -22,7 +22,8 @@ body{
 
 .drink-name {
   color: #eebc70;
-  font-size: 1.25em;
+  font-family : ITC Avant Garde Gothic Pro;
+  font-size: 1.4em;
   text-align: center;
   text-decoration: none;
 }
@@ -33,10 +34,6 @@ body{
 
 .drink-nav {
   height: fit-content;
-}
-
-.drink-display {
-  background-color: #181C1E;
 }
 
 .title-wrapper {

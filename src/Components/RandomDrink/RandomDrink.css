@@ -31,12 +31,14 @@
   margin: 2.5px;
   flex-direction: column;
   align-items: center;
+  font-family : ITC Avant Garde Gothic Pro;
 }
 
 .title {
   padding: 1px;
   color: #eebc70;
   font-weight: 500;
+  font-family : ITC Avant Garde Gothic Pro;
 }
 
 
