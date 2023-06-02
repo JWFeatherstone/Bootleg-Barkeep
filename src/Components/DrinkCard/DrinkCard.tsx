@@ -3,8 +3,6 @@ import "./DrinkCard.css";
 import { Drink } from "../../Types/Drink";
 import { NavLink } from 'react-router-dom';
 
-
-
 export const DrinkCard = ({ strDrinkThumb: image, strDrink: name, idDrink: id }: Drink) => {
   return (
     <NavLink className="drink-card-nav" to={`/drink/${id}`} key={id} >
