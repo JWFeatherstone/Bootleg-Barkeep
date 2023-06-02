@@ -10,7 +10,7 @@ class DrinkDetails extends Component<any, any> {
     constructor(props: any) {
         super(props);
         this.state = {
-            drink: {}
+            drink: {},
         }
     }
 
@@ -47,15 +47,23 @@ class DrinkDetails extends Component<any, any> {
         return (
             <div id={id} className="drink-details">
                 <div className="left-side">
-                    <h2 className="detail-name">{this.state.drink.strDrink}</h2>
-                    <img className="detail-image" src={this.state.drink.strDrinkThumb} alt={this.state.drink.strDrink} />
+                    <div id={id} className="drink-card" >
+                        <img className="drink-image" src={this.state.drink.strDrinkThumb} alt={this.state.drink.strDrink} />
+                        <h2 className="drink-name">{this.state.drink.strDrink}</h2>
+                    </div>
                 </div>
                 <div className="right-side">
-                    <h4 className="glass">{this.state.drink.strGlass}</h4>
-                    {ingredients.map((ingredient, index) => (
-                        <p className="ingredients" key={index}>{ingredient}</p>
-                    ))}
-                    <p className="instructions">{this.state.drink.strInstructions}</p>
+                    <section className="prep-wrapper">
+                        <h3 className="prep-title">Make the {this.state.drink.strDrink}</h3>
+                        <h4 className="prep-subtitle">GLASS</h4>
+                        <p className="prep-detail">{this.state.drink.strGlass}</p>
+                        <h4 className="prep-subtitle">INGREDIENTS</h4>
+                        {ingredients.map((ingredient, index) => (
+                        <p className="prep-detail" key={index}>{ingredient}</p>
+                        ))}
+                        <h4 className="prep-subtitle">INSTRUCTIONS</h4>
+                        <p className="prep-detail">{this.state.drink.strInstructions}</p>
+                    </section>
                 </div>
             </div>
         )
