@@ -15,7 +15,7 @@ import { error } from 'console';
 
 const App = () => {
   const [randomDrink, setRandomDrink] = useState<Drink[]>([]);
-  const [errorMsg, setErrorMsg] = useState<string>('');
+  const [errorMsg, setErrorMsg] = useState<string>('Server error.');
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const getRandomDrink = useCallback(async () => {
