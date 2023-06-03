@@ -79,7 +79,7 @@ describe("Drink Grid Gin", () => {
     cy.get(".home-nav").click();
     cy.wait("@randomDrink")
       .get("h2")
-      .should("contain", "Lucky Libations")
+      .should("contain", "LUCKY LIBATIONS")
       .get(".random-img")
       .should(
         "have.attr",
@@ -92,7 +92,7 @@ describe("Drink Grid Gin", () => {
       .should("contain", "Loch Lomond");
   });
 
-  it("should navigate to detailed view of first drink on grid in gin category", () => {
+  it("should navigate to detailed view of first drink and last drink on grid in gin category", () => {
     cy.get(".ingredient-nav").eq(3).click();
     cy.wait("@ginCocktails");
 
@@ -100,15 +100,12 @@ describe("Drink Grid Gin", () => {
 
     cy.get(".drink-card").first().click();
     cy.wait("@ginCocktail1");
-    cy.get(".detail-name").should("contain", "69 Special");
-    cy.get(".detail-image").should(
+    cy.get(".drink-name").should("contain", "69 Special");
+    cy.get(".drink-image").should(
       "have.attr",
       "src",
       "https://www.thecocktaildb.com/images/media/drink/vqyxqx1472669095.jpg"
     );
-  });
-
-  it("should navigate to detailed view of last drink on grid in gin category", () => {
     cy.get(".ingredient-nav").eq(3).click();
     cy.wait("@ginCocktails");
 
@@ -116,8 +113,8 @@ describe("Drink Grid Gin", () => {
 
     cy.get(".drink-card").last().click();
     cy.wait("@ginCocktail2");
-    cy.get(".detail-name").should("contain", "Alexander");
-    cy.get(".detail-image").should(
+    cy.get(".drink-name").should("contain", "Alexander");
+    cy.get(".drink-image").should(
       "have.attr",
       "src",
       "https://www.thecocktaildb.com/images/media/drink/0clus51606772388.jpg"
@@ -134,7 +131,7 @@ describe("Drink Grid Gin", () => {
     cy.go("back");
 
     cy.wait("@randomDrink");
-    cy.get("h2").should("contain", "Lucky Libations");
+    cy.get("h2").should("contain", "LUCKY LIBATIONS");
     cy.get(".random-img").should(
       "have.attr",
       "src",

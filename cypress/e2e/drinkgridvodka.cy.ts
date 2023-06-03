@@ -82,7 +82,7 @@ describe("Drink Grid Vodka", () => {
     cy.get(".home-nav").click();
     cy.wait("@randomDrink")
       .get("h2")
-      .should("contain", "Lucky Libations")
+      .should("contain", "LUCKY LIBATIONS")
       .get(".random-img")
       .should(
         "have.attr",
@@ -95,7 +95,7 @@ describe("Drink Grid Vodka", () => {
       .should("contain", "Loch Lomond");
   });
 
-  it("should navigate to detailed view of first drink on grid and show detailed view", () => {
+  it("should navigate to detailed view of first drink and last drink on grid and show detailed view", () => {
     cy.get(".ingredient-nav").eq(2).click();
     cy.wait("@vodkaCocktails");
 
@@ -104,27 +104,23 @@ describe("Drink Grid Vodka", () => {
     cy.get(".drink-card").first().click();
     cy.wait("@vodkaCocktail1");
 
-    cy.get(".detail-name").should("contain", "155 Belmont");
-    cy.get(".detail-image").should(
+    cy.get(".drink-name").should("contain", "155 Belmont");
+    cy.get(".drink-image").should(
       "have.attr",
       "src",
       "https://www.thecocktaildb.com/images/media/drink/yqvvqs1475667388.jpg"
     );
-  });
-
-  it("should navigate to detailed view of last drink on grid display detailed view", () => {
     cy.get(".ingredient-nav").eq(2).click();
     cy.wait("@vodkaCocktails");
     cy.get(".drink-title").should("contain", "Vodka");
     cy.get(".drink-card").last().click();
     cy.wait("@vodkaCocktail2");
-    cy.get(".detail-name").should("contain", "Adam Bomb");
-    cy.get(".detail-image").should(
+    cy.get(".drink-name").should("contain", "Adam Bomb");
+    cy.get(".drink-image").should(
       "have.attr",
       "src",
       "https://www.thecocktaildb.com/images/media/drink/tpxurs1454513016.jpg"
     );
-    cy.get(".home-nav").click();
   });
 
   it("should navigate back to the previous page when the back button is clicked", () => {
@@ -136,7 +132,7 @@ describe("Drink Grid Vodka", () => {
     cy.go("back");
 
     cy.wait("@randomDrink");
-    cy.get("h2").should("contain", "Lucky Libations");
+    cy.get("h2").should("contain", "LUCKY LIBATIONS");
     cy.get(".random-img").should(
       "have.attr",
       "src",

@@ -64,11 +64,11 @@ describe("Alcohol Grid Component", () => {
   it("should navigate back to the previous page when the back button is clicked", () => {
     cy.get(".ingredient-nav").eq(2).click();
     cy.wait("@fetchCocktails");
-  
+
     cy.get(".drink-title").should("contain", "Vodka");
-  
+
     cy.go("back");
-  
+
     cy.wait("@randomDrink");
     cy.get("h2").should("contain", "Lucky Libations");
     cy.get(".random-img").should(

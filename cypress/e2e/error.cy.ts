@@ -18,18 +18,22 @@ describe('error handling', () => {
     cy.get('section').should('have.class', 'error-page')
     cy.get('.error-message').should('have.text', 'A server error occured while we were trying to fetch your cocktails. Please try again.')
   })
-
+  
   it('should display an error page when the cocktails for the drink grid fail to fetch', () => {
+    cy.visit('localhost:3000') 
     cy.visit('localhost:3000/drinks/gin')
     cy.get('section').should('have.class', 'error-page')
     cy.get('.error-message').should('have.text', 'A server error occured while we were trying to fetch your cocktails. Please try again.')
+    cy.wait(2000) 
     cy.url().should('eq', 'http://localhost:3000/error')
   })
-
+  
   it('should display an error page when the details for a specific cocktail fail to fetch', () => {
-    cy.visit('localhost:3000/drinks/15346')
+    cy.visit('localhost:3000') 
+    cy.visit('localhost:3000/drinks/15346') 
     cy.get('section').should('have.class', 'error-page')
     cy.get('.error-message').should('have.text', 'A server error occured while we were trying to fetch your cocktails. Please try again.')
+    cy.wait(2000)
     cy.url().should('eq', 'http://localhost:3000/error')
   })
 })
