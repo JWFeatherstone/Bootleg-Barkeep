@@ -23,8 +23,9 @@ Cocktail data for the project was accessed from the public [Cocktail DB API](htt
 [Project Spec and Rubric](https://frontend.turing.edu/projects/module-3/stretch.html)
 ## Reflections
 ### Wins
-...
+(Kelli) I initially struggled deciding how to set up my component, as it was nested and relied on my ability to effectively read code written by my teammates, who were using different techniques than myself (async/await instead of fetch calls and hooks instead of class components). I was initially very overwhelmed and was second-guessing myself. I eventually asked my teammates to meet with me via zoom so I could rubber-duck my ideas and discuss other options. This was very beneficial and I was very proud when I was able to present my component!
 ### Challenges, Lessons Learned & Potential Improvements
+(Kelli) This was the first time I worked in a group that primarily did independent work. This was initially very overwhelming and I felt like I didn't know where to start on my tasks. I learned how to effectively have daily stand-up meetings to discuss progress, barriers, and goals. This process helped me improve my solo research skills and made me more comfortable communicating issues/blockers asynchronously. This is still an area for me to improve upon, but I already feel more confident in my ability to explain my thought process and ask for help when needed.
 ...
 ## Set Up
 ### Option 1: Visit the Deployed Site
