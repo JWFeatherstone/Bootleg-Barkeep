@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import '../DrinkDetails/DrinkDetails.css';
 import { fetchDetails } from "../API/apiCalls";
 import { DrinkDetailsProps, DrinkDetailsState } from "../../Types/Details";
 
