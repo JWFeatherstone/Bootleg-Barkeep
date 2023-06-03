@@ -8,7 +8,7 @@ const RandomDrink: React.FC<Drink> = ({ strDrink, strDrinkThumb, idDrink:id }) =
     <NavLink className="random-card-nav" to={`/drink/${id}`} key={id} >
     <div className="random-page-wrapper">
     <div className="lucky-line">
-    <h2 className="lucky">Lucky Libations</h2>
+    <h2 className="lucky">LUCKY LIBATIONS</h2>
     </div>
       <div className="random-container">
         <img className="random-img" src={strDrinkThumb} alt={strDrink} id={id} />
