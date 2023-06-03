@@ -6,5 +6,14 @@ export interface Details {
     strInstructions: string;
     strIngredients: string[];
     strMeasures: string[];
-    id: string
-}
+    id: string;
+    [key: string]: any;
+  }
+  
+  export type DrinkDetailsProps = {
+    id: string;
+  };
+  
+  export type DrinkDetailsState = {
+    drink: Details;
+  };

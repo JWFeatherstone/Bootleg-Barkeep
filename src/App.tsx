@@ -39,40 +39,40 @@ const App = () => {
 
   return (
     <>
-
-      {(errorMsg) ? (
+      {errorMsg ? (
         <ErrorPage message={errorMsg} />
       ) : (
-        <Switch>
-          <Route exact path="/">
-            <main>
-              <Header />
-              <Home randomDrink={randomDrink} />
-            </main>
-          </Route>
-          <Route exact path="/drinks/:alcohol">
-            <main>
-              <Header />
-              <DrinkGrid />
-            </main>
-          </Route>
-          <Route exact path='/drink/:id' render={({ match }) => (
-            <main>
-              <Header />
-
-              <DrinkDetails id={match.params.id} />
-            </main>
-
-          )} />
-          {/* </Route> */}
-          <Route exact path="/error">
-            <ErrorPage message={errorMsg} />
-          </Route>
-        </Switch >)
-      }
-
+        <>
+          <Switch>
+            <Route exact path="/">
+              <main>
+                <Header />
+                <Home randomDrink={randomDrink} />
+              </main>
+            </Route>
+            <Route exact path="/drinks/:alcohol">
+              <main>
+                <Header />
+                <DrinkGrid />
+              </main>
+            </Route>
+            <Route exact path="/drink/:id" render={({ match }) => (
+              <main>
+                <Header />
+                <DrinkDetails id={match.params.id} />
+              </main>
+            )} />
+            <Route exact path="/error">
+              <ErrorPage message={errorMsg} />
+            </Route>
+            <Route path="*">
+              <Redirect to="/error" />
+            </Route>
+          </Switch>
+        </>
+      )}
     </>
   );
-}
+};
 
 export default App;
