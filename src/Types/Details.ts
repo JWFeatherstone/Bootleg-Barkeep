@@ -6,4 +6,5 @@ export interface Details {
     strInstructions: string;
     strIngredients: string[];
     strMeasures: string[];
+    id: string
 }

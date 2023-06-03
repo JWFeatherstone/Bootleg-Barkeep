@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import '../DrinkDetails/DrinkDetails.css';
 import { fetchDetails } from '../API/apiCalls';
+import { Details } from '../../Types/Details'
+
 
 
 class DrinkDetails extends Component<any, any> {
-    constructor(props: any) {
+    constructor(props: string) {
         super(props);
         this.state = {
             drink: {},
