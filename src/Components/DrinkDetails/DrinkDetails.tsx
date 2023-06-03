@@ -3,7 +3,6 @@ import '../DrinkDetails/DrinkDetails.css';
 import { fetchDetails } from '../API/apiCalls';
 
 
-
 class DrinkDetails extends Component<any, any> {
     constructor(props: any) {
         super(props);
@@ -23,6 +22,9 @@ class DrinkDetails extends Component<any, any> {
                 drink: data
             })
         })
+            .catch((error) => {
+                throw new Error('Error')
+            })
     }
 
     organizeIngredientsAndAmounts(): string[] {
