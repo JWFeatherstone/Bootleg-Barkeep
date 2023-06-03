@@ -20,7 +20,7 @@ describe('Home Component', () => {
     it('should display a random drink with title and image', () => {
       cy.wait('@randomDrink');
 
-      cy.get('.home-page h2').should('contain', 'Lucky Libations')
+      cy.get('.home-page h2').should('contain', 'LUCKY LIBATIONS')
       .get('.home-page .random-img').should('have.attr', 'src', 'https://www.thecocktaildb.com/images/media/drink/yqvvqs1475667388.jpg')
       .get('.home-page .random-img').should('have.attr', 'alt', '155 Belmont')
       .get('.home-page .title').should('contain', '155 Belmont');

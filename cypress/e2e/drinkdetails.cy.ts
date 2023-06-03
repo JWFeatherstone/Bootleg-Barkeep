@@ -85,7 +85,7 @@ describe("Drink Details Component", () => {
     cy.get(".home-nav").click();
     cy.wait("@randomDrink")
       .get("h2")
-      .should("contain", "Lucky Libations")
+      .should("contain", "LUCKY LIBATIONS")
       .get(".random-container img")
       .should(
         "have.attr",
