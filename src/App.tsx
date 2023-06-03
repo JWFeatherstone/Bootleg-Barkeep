@@ -7,23 +7,18 @@ import { ErrorPage } from "./Components/ErrorPage/ErrorPage";
 import { DrinkGrid } from './Components/DrinkGrid/DrinkGrid';
 import DrinkDetails from './Components/DrinkDetails/DrinkDetails';
 import { Drink } from './Types/Drink';
-import { Details } from './Types/Details';
-import { Route, Switch, Redirect, useParams } from 'react-router-dom';
-import { error } from 'console';
+import { Route, Switch } from 'react-router-dom';
 
 
 
 const App = () => {
   const [randomDrink, setRandomDrink] = useState<Drink[]>([]);
   const [errorMsg, setErrorMsg] = useState<string>('');
-  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const getRandomDrink = useCallback(async () => {
     try {
-      setIsLoading(true);
       const jsonData = await fetchRandom();
       setRandomDrink(jsonData);
-      setIsLoading(false);
     } catch (error) {
       if (error instanceof Error) {
         setErrorMsg("Server error.");
@@ -41,7 +36,7 @@ const App = () => {
     <>
 
       {(errorMsg) ? (
-        <ErrorPage message={errorMsg} />
+        <ErrorPage/>
       ) : (
         <Switch>
           <Route exact path="/">
@@ -64,9 +59,8 @@ const App = () => {
             </main>
 
           )} />
-          {/* </Route> */}
           <Route exact path="/error">
-            <ErrorPage message={errorMsg} />
+            <ErrorPage />
           </Route>
         </Switch >)
       }

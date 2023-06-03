@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../DrinkDetails/DrinkDetails.css';
 import { fetchDetails } from '../API/apiCalls';
+import { Redirect } from 'react-router-dom';
 
 
 class DrinkDetails extends Component<any, any> {
@@ -8,6 +9,7 @@ class DrinkDetails extends Component<any, any> {
         super(props);
         this.state = {
             drink: {},
+            error: ''
         }
     }
 
@@ -22,9 +24,13 @@ class DrinkDetails extends Component<any, any> {
                 drink: data
             })
         })
-            .catch((error) => {
-                throw new Error('Error')
-            })
+        .catch((error) => {
+            if (error instanceof Error) {
+                this.setState({error: "Server error."});
+            } else {
+                this.setState({error: "Unknown error."});
+            }
+        })  
     }
 
     organizeIngredientsAndAmounts(): string[] {
@@ -48,6 +54,7 @@ class DrinkDetails extends Component<any, any> {
         const ingredients: string[] = this.organizeIngredientsAndAmounts()
         const { id } = this.props
         return (
+            this.state.error ? <Redirect push to="/error" /> :
             <div id={id} className="drink-details">
                 <div className="left-side">
                     <div id={id} className="drink-card" >
