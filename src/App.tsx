@@ -33,7 +33,7 @@ const App = () => {
   return (
     <>
       {errorMsg ? (
-        <ErrorPage message={errorMsg} />
+        <ErrorPage/>
       ) : (
         <>
           <Switch>
@@ -60,7 +60,7 @@ const App = () => {
               )}
             />
             <Route exact path="/error">
-              <ErrorPage message={errorMsg} />
+              <ErrorPage/>
             </Route>
             <Route path="*">
               <Redirect to="/error" />

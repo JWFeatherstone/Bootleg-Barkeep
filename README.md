@@ -76,23 +76,35 @@ This web application was developed for the Turing School of Software and Design'
   - Ashlee Webb - [GitHub](https://github.com/AshleeAWebb) [LinkedIn](https://www.linkedin.com/in/ashlee-webb/)
   - John Featherstone - [GitHub](https://github.com/JWFeatherstone) [LinkedIn](https://www.linkedin.com/in/john-w-featherstone/)
 ## Illustrations
-This will be a gif
+![Demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWRiZGM1OGM0NmIwZDVlNjM0MTAyNGQ2YzdjNTk3OTE3OTE0NGQ4ZSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/hqlJ6D37T53SgL0E1Z/giphy.gif)
 ## Deployed Page
-Visit our deployed page here
+Visit our deployed page [here](https://bootleg-barkeep.vercel.app/).
 ## Wins
-(Kelli) I initially struggled deciding how to set up my component, as it was nested and relied on my ability to effectively read code written by my teammates, who were using different techniques than myself (async/await instead of fetch calls and hooks instead of class components). I was initially very overwhelmed and was second-guessing myself. I eventually asked my teammates to meet with me via zoom so I could rubber-duck my ideas and discuss other options. This was very beneficial and I was very proud when I was able to present my component!
+**Kelli**
+I initially struggled deciding how to set up my component, as it was nested and relied on my ability to effectively read code written by my teammates, who were using different techniques than myself (async/await instead of fetch calls and hooks instead of class components). I was initially very overwhelmed and was second-guessing myself. I eventually asked my teammates to meet with me via zoom so I could rubber-duck my ideas and discuss other options. This was very beneficial and I was very proud when I was able to present my component!
 
-(Adriane) In my first mod 3 project I struggled greatly with using router and made a lot of mistakes, in this project I feel that I actually was better able to understand how router was working and better able to connect the pages together. This is less of a personal win, but I also think that this team worked very well together and communicated very well and I think that is such a huge win over all.
+**Adriane**
+In my first mod 3 project I struggled greatly with using router and made a lot of mistakes, in this project I feel that I actually was better able to understand how router was working and better able to connect the pages together. This is less of a personal win, but I also think that this team worked very well together and communicated very well and I think that is such a huge win over all.
 
-(Ashlee) One of the major wins for me was gaining a deeper understanding of TypeScript. This project was my first experience using TypeScript extensively, and I found it incredibly valuable in terms of providing type safety and enhancing the overall development process. I'm proud of how we successfully integrated TypeScript into our React project and utilized its features effectively. I really apprecaited the organization, teamwork and thoughtfulness of this group. 
+**Ashlee**
+One of the major wins for me was gaining a deeper understanding of TypeScript. This project was my first experience using TypeScript extensively, and I found it incredibly valuable in terms of providing type safety and enhancing the overall development process. I'm proud of how we successfully integrated TypeScript into our React project and utilized its features effectively. I really apprecaited the organization, teamwork and thoughtfulness of this group. 
+
+**John**
+While integrating TypeScript for the first time was initially challenging - especially with respect to defining and using custom types - I found I really enjoyed the more deliberate approach to building out a project that it encouraged and the familiarity with the shape and flow of the data that I gained having to be explicit about what parameters and returns should be expected at each stage. Beyond the code, I was really pleased with how seamlessly this group worked asynchronously and the high level of communication that enabled that.
 
 ## Challenges & Improvements
-(Kelli) This was the first time I worked in a group that primarily did independent work. This was initially very overwhelming and I felt like I didn't know where to start on my tasks. I learned how to effectively have daily stand-up meetings to discuss progress, barriers, and goals. This process helped me improve my solo research skills and made me more comfortable communicating issues/blockers asynchronously. This is still an area for me to improve upon, but I already feel more confident in my ability to explain my thought process and ask for help when needed.
-...
+**Kelli** 
+This was the first time I worked in a group that primarily did independent work. This was initially very overwhelming and I felt like I didn't know where to start on my tasks. I learned how to effectively have daily stand-up meetings to discuss progress, barriers, and goals. This process helped me improve my solo research skills and made me more comfortable communicating issues/blockers asynchronously. This is still an area for me to improve upon, but I already feel more confident in my ability to explain my thought process and ask for help when needed.
 
-(Adriane) I learned a lot from my groupmates about cypress in this project, I learn well by seeing what other people do and my groupmates wrote very robust tests. I also on my own branch practiced writing my own cypress tests. In the last project I’d say I was very bad at Cypres, but because of the people I worked with and the practice I did during this project I feel much more comfortable with it now. I’d still say I have a lot more to learn though.
+**Adriane**
+I learned a lot from my groupmates about cypress in this project, I learn well by seeing what other people do and my groupmates wrote very robust tests. I also on my own branch practiced writing my own cypress tests. In the last project I’d say I was very bad at Cypres, but because of the people I worked with and the practice I did during this project I feel much more comfortable with it now. I’d still say I have a lot more to learn though.
 
-(Ashlee) One challenge I faced during this project was working with different asynchronous techniques used by my teammates. It required me to adapt and understand different code patterns and approaches. However, this challenge turned into an opportunity for growth as I learned how to read and work with different styles of code. In the future, I would like to further improve my ability to switch between different code patterns seamlessly and maintain consistency throughout the project. I also learned so many great skills from my team such as best practices with TypeScript, how to properly use async await and a better understanding of hooks. 
+**Ashlee**
+One challenge I faced during this project was working with different asynchronous techniques used by my teammates. It required me to adapt and understand different code patterns and approaches. However, this challenge turned into an opportunity for growth as I learned how to read and work with different styles of code. In the future, I would like to further improve my ability to switch between different code patterns seamlessly and maintain consistency throughout the project. I also learned so many great skills from my team such as best practices with TypeScript, how to properly use async await and a better understanding of hooks. 
+
+**John**
+I think the biggest hurdle throughout this project was working with and refactoring other peoples' code, especially in the context of TypeScript and custom types. Taking the time to talk through - and, at times, annotate - existing components and files was a huge help in that process and is something I'd like to continue pushing myself to improve ahead of going into a real-world environment where working with existing codebases is the norm and it's important to make contributions that are empathetic to other developers and mindful of long-term redundancy.
+
 ## Set Up
 1. Fork [this](https://github.com/JWFeatherstone/bootleg-barkeep) repository to your GitHub account.
 1. Copy SSH key on GitHub inside the code dropdown.

@@ -3,6 +3,7 @@ import "../DrinkDetails/DrinkDetails.css";
 import { fetchDetails } from "../../API/apiCalls";
 import { DrinkDetailsProps, DrinkDetailsState } from "../../Types/Details";
 import { cleanDrinkDetailsData } from "src/API/utilities";
+import { Redirect } from 'react-router-dom';
 
 class DrinkDetails extends Component<DrinkDetailsProps, DrinkDetailsState> {
   constructor(props: DrinkDetailsProps) {
@@ -18,7 +19,7 @@ class DrinkDetails extends Component<DrinkDetailsProps, DrinkDetailsState> {
         strMeasures: [],
         id: "",
       },
-      errorMsg: null, 
+      error: '', 
     };
   }
 
@@ -27,23 +28,20 @@ class DrinkDetails extends Component<DrinkDetailsProps, DrinkDetailsState> {
   }
 
   getInfo() {
-    const { id } = this.props;
-    fetchDetails(id)
-      .then((data) => {
+     const { id } = this.props
+     fetchDetails(id).then((data) => {
         this.setState({
           drink: cleanDrinkDetailsData(data),
-          errorMsg: null,
+          error: '',
         });
       })
       .catch((error) => {
-        let errorMsg;
         if (error instanceof Error) {
-          errorMsg = "Server error.";
+           this.setState({error: "Server error."});
         } else {
-          errorMsg = "Unknown error.";
+          this.setState({error: "Unknown error."});
         }
-        this.setState({ errorMsg });
-      });
+      })  
   }
 
   organizeIngredientsAndAmounts(): string[] {
@@ -66,6 +64,7 @@ class DrinkDetails extends Component<DrinkDetailsProps, DrinkDetailsState> {
     const ingredients: string[] = this.organizeIngredientsAndAmounts();
     const { id } = this.props;
     return (
+      this.state.error ? <Redirect to="/error" /> :
       <div id={id} className="drink-details">
         <div className="left-side">
           <div id={id} className="drink-card">

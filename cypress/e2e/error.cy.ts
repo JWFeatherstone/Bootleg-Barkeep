@@ -42,8 +42,6 @@ describe("error handling", () => {
       "have.text",
       "A server error occured while we were trying to fetch your cocktails. Please try again."
     );
-    cy.wait(2000);
-    cy.url().should("eq", "http://localhost:3000/error");
   });
 
   it("should display an error page when the details for a specific cocktail fail to fetch", () => {
@@ -54,7 +52,5 @@ describe("error handling", () => {
       "have.text",
       "A server error occured while we were trying to fetch your cocktails. Please try again."
     );
-    cy.wait(2000);
-    cy.url().should("eq", "http://localhost:3000/error");
   });
 });

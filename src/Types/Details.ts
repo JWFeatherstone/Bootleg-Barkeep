@@ -16,6 +16,6 @@ export type DrinkDetailsProps = {
 
 export type DrinkDetailsState = {
   drink: Details;
-  errorMsg: string | null;
+  error: string;
 };
 
