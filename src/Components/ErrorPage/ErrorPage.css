@@ -1,6 +1,6 @@
 .error-page {
   display: grid;
-  background: url(src/img/error-background.svg);
+  background: url(src/Assets/error-background.svg);
   height: 100%;
   display: flex;
   justify-content: center;
@@ -41,7 +41,7 @@
 
 .error-link {
   height: 100%;
-  background: url(../../img/error-nav-icon.svg);
+  background: url(../../Assets/error-nav-icon.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

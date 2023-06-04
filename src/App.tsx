@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "./App.css";
 import Home from "./Components/Home/Home";
-import { fetchRandom } from "./Components/API/apiCalls";
+import { fetchRandom } from "./API/apiCalls";
 import Header from "./Components/Header/Header";
 import { ErrorPage } from "./Components/ErrorPage/ErrorPage";
 import { DrinkGrid } from "./Components/DrinkGrid/DrinkGrid";
 import DrinkDetails from "./Components/DrinkDetails/DrinkDetails";
 import { Drink } from "./Types/Drink";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect} from "react-router-dom";
 
 const App = () => {
   const [randomDrink, setRandomDrink] = useState<Drink[]>([]);

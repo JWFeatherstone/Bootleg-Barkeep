@@ -30,7 +30,7 @@ header {
   top: -39px;
   z-index: 1;
   background-position: center;
-  background-image: url(../../img/logo-v0.1.svg);
+  background-image: url(../../Assets/logo-v0.1.svg);
 }
 
 .home-nav:hover {

@@ -36,10 +36,19 @@ describe("Drink Grid Vodka", () => {
         body: {
           drinks: [
             {
-              strDrink: "155 Belmont",
-              strDrinkThumb:
-                "https://www.thecocktaildb.com/images/media/drink/yqvvqs1475667388.jpg",
-              idDrink: "15346",
+              "idDrink":"15346",
+              "strDrink":"155 Belmont",
+              "strGlass":"White wine glass",
+              "strInstructions":"Blend with ice. Serve in a wine glass. Garnish with carrot.",
+              "strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/yqvvqs1475667388.jpg",
+              "strIngredient1":"Dark rum",
+              "strIngredient2":"Light rum",
+              "strIngredient3":"Vodka",
+              "strIngredient4":"Orange juice",
+              "strMeasure1":"1 shot ",
+              "strMeasure2":"2 shots ",
+              "strMeasure3":"1 shot ",
+              "strMeasure4":"1 shot ",
             },
           ],
         },
@@ -54,10 +63,24 @@ describe("Drink Grid Vodka", () => {
         body: {
           drinks: [
             {
-              strDrink: "Adam Bomb",
-              strDrinkThumb:
-                "https://www.thecocktaildb.com/images/media/drink/tpxurs1454513016.jpg",
-              idDrink: "16333",
+              "idDrink":"16333",
+              "strDrink":"Adam Bomb",
+              "strGlass":"Margarita\/Coupette glass",
+              "strInstructions":"Add ice to blender (or to glass if prefer on the rocks) then fruit, and fruite juice depending on personal prefference then add the Rum, Vodka, Tequila, and triple sec. blend till smooth, rim glass with sugar or salt and pour mixture in. garnish with lemon or lime slice.",
+              "strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/tpxurs1454513016.jpg",
+              "strIngredient1":"Rum",
+              "strIngredient2":"Vodka",
+              "strIngredient3":"Tequila",
+              "strIngredient4":"Triple sec",
+              "strIngredient5":"Fruit",
+              "strIngredient6":"Ice",
+              "strIngredient7":"Salt",
+              "strIngredient8":"Fruit juice",
+              "strMeasure1":"1 part ",
+              "strMeasure2":"1 part ",
+              "strMeasure3":"1 part ",
+              "strMeasure4":"1\/2 part ",
+              "strMeasure7":"1-3 pint ",
             },
           ],
         },

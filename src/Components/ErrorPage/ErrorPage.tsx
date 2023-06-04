@@ -1,7 +1,7 @@
-import React from 'react';
-import './ErrorPage.css';
-import errorImage from '../../img/error-icon.svg'
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import "./ErrorPage.css";
+import errorImage from "../../Assets/error-icon.svg";
+import { NavLink } from "react-router-dom";
 
 export const ErrorPage: React.FC = () => {
 

@@ -1,5 +1,5 @@
-import { Drink } from "../../Types/Drink";
-import { Details } from "../../Types/Details";
+import { Drink } from "../Types/Drink";
+import { Details } from "../Types/Details";
 
 const fetchRandom = async (): Promise<Drink[]> => {
   const response = await fetch(

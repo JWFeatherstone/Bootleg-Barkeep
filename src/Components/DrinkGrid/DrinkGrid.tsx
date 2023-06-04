@@ -3,7 +3,8 @@ import "./DrinkGrid.css";
 import { useParams, Redirect } from "react-router-dom";
 import { DrinkCard } from "../DrinkCard/DrinkCard";
 import { Drink } from "../../Types/Drink";
-import { fetchCocktails } from "../API/apiCalls";
+import { fetchCocktails } from "../../API/apiCalls";
+import { cleanDrinkData } from "src/API/utilities";
 
 export const DrinkGrid = () => {
   const { alcohol } = useParams<{ alcohol: string }>();
@@ -13,7 +14,7 @@ export const DrinkGrid = () => {
   useEffect(() => {
     fetchCocktails(alcohol)
       .then((drinkData) => {
-        setDrinks(drinkData);
+        setDrinks(cleanDrinkData(drinkData));
       })
       .catch((error) => {
         if (error instanceof Error) {
@@ -27,6 +28,7 @@ export const DrinkGrid = () => {
   const drinkDisplay = drinks.map((drink) => {
     return (
       <DrinkCard
+        key={drink.idDrink}
         idDrink={drink.idDrink}
         strDrinkThumb={drink.strDrinkThumb}
         strDrink={drink.strDrink}

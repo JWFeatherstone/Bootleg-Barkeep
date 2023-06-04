@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "../DrinkDetails/DrinkDetails.css";
-import { fetchDetails } from "../API/apiCalls";
+import { fetchDetails } from "../../API/apiCalls";
 import { DrinkDetailsProps, DrinkDetailsState } from "../../Types/Details";
+import { cleanDrinkDetailsData } from "src/API/utilities";
 import { Redirect } from 'react-router-dom';
 
 class DrinkDetails extends Component<DrinkDetailsProps, DrinkDetailsState> {
@@ -30,8 +31,9 @@ class DrinkDetails extends Component<DrinkDetailsProps, DrinkDetailsState> {
      const { id } = this.props
      fetchDetails(id).then((data) => {
         this.setState({
-           drink: data
-        })
+          drink: cleanDrinkDetailsData(data),
+          error: '',
+        });
       })
       .catch((error) => {
         if (error instanceof Error) {
