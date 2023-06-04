@@ -78,7 +78,7 @@ This web application was developed for the Turing School of Software and Design'
 ## Illustrations
 This will be a gif
 ## Deployed Page
-Visit our deployed page here
+Visit our deployed page [here](https://bootleg-barkeep.vercel.app/).
 ## Wins
 **Kelli**
 I initially struggled deciding how to set up my component, as it was nested and relied on my ability to effectively read code written by my teammates, who were using different techniques than myself (async/await instead of fetch calls and hooks instead of class components). I was initially very overwhelmed and was second-guessing myself. I eventually asked my teammates to meet with me via zoom so I could rubber-duck my ideas and discuss other options. This was very beneficial and I was very proud when I was able to present my component!
