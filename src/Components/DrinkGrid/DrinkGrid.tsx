@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./DrinkGrid.css";
-import { NavLink, useParams, Redirect } from "react-router-dom";
+import { useParams, Redirect } from "react-router-dom";
 import { DrinkCard } from "../DrinkCard/DrinkCard";
 import { Drink } from "../../Types/Drink";
-import { ErrorPage } from "../ErrorPage/ErrorPage";
 import { fetchCocktails } from "../API/apiCalls";
 
 export const DrinkGrid = () => {
@@ -39,7 +38,7 @@ export const DrinkGrid = () => {
   return (
     <>
       {errorMsg ? (
-        <Redirect push to="/error" />
+        <Redirect to="/error" />
       ) : (
         <div className="drink-wrapper">
           <div className="title-wrapper">

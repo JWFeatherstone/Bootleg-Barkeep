@@ -7,7 +7,7 @@ import { ErrorPage } from "./Components/ErrorPage/ErrorPage";
 import { DrinkGrid } from "./Components/DrinkGrid/DrinkGrid";
 import DrinkDetails from "./Components/DrinkDetails/DrinkDetails";
 import { Drink } from "./Types/Drink";
-import { Route, Switch, Redirect, useParams } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 const App = () => {
   const [randomDrink, setRandomDrink] = useState<Drink[]>([]);

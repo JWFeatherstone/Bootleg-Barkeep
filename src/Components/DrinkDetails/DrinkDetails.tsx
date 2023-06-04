@@ -18,7 +18,7 @@ class DrinkDetails extends Component<DrinkDetailsProps, DrinkDetailsState> {
         strMeasures: [],
         id: "",
       },
-      errorMsg: null, 
+      error: '', 
     };
   }
 
@@ -62,7 +62,7 @@ class DrinkDetails extends Component<DrinkDetailsProps, DrinkDetailsState> {
     const ingredients: string[] = this.organizeIngredientsAndAmounts();
     const { id } = this.props;
     return (
-      this.state.error ? <Redirect push to="/error" /> :
+      this.state.error ? <Redirect to="/error" /> :
       <div id={id} className="drink-details">
         <div className="left-side">
           <div id={id} className="drink-card">
