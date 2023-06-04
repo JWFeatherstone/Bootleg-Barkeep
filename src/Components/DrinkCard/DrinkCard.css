@@ -1,5 +1,5 @@
 /* backgrounds */
-body{
+body {
   background-image: url("src/Assets/hotel-wallpaper.png");
 }
 
@@ -29,19 +29,20 @@ body{
 
 /* text */
 .drink-name {
-  font-family : ITC Avant Garde Gothic Pro;
+  font-family: ITC Avant Garde Gothic Pro;
   font-size: 1.4em;
   text-align: center;
   text-decoration: none;
 }
 
 .drink-title {
-  font-family : ITC Serif Gothic Std;
+  font-family: ITC Serif Gothic Std;
   padding: 0.3em 0.5em;
   border: #eebc70 double;
 }
 
-.drink-name, .drink-title {
+.drink-name,
+.drink-title {
   color: #eebc70;
 }
 
@@ -54,4 +55,3 @@ body{
   justify-content: center;
   margin: 1.5em 0;
 }
-

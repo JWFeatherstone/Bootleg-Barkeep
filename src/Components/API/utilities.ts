@@ -1,9 +1,11 @@
-import { RandomDrinkProps } from 'src/Types/RandomDrinkProps';
-import { Drink } from '../../Types/Drink';
+import { RandomDrinkProps } from "src/Types/RandomDrinkProps";
+import { Drink } from "../../Types/Drink";
 
 export const cleanDrinkData = (drinkData: Drink[]): RandomDrinkProps[] => {
   return drinkData
-    .filter((drink: Drink) => drink.idDrink && drink.strDrink && drink.strDrinkThumb)
+    .filter(
+      (drink: Drink) => drink.idDrink && drink.strDrink && drink.strDrinkThumb
+    )
     .map(({ idDrink, strDrink, strDrinkThumb }: Drink) => ({
       drinkId: idDrink,
       randomImg: strDrinkThumb,
@@ -13,7 +15,7 @@ export const cleanDrinkData = (drinkData: Drink[]): RandomDrinkProps[] => {
 
 const capitalizeTitle = (title: string): string => {
   return title
-    .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 };

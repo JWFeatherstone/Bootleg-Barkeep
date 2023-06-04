@@ -15,7 +15,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  outline: 1px solid #EEBC70;
+  outline: 1px solid #eebc70;
   padding: 1%;
   margin-top: 2em;
   z-index: 1;
@@ -30,7 +30,7 @@ header {
   top: -39px;
   z-index: 1;
   background-position: center;
-  background-image: url(../../img/logo-v0.1.svg)
+  background-image: url(../../img/logo-v0.1.svg);
 }
 
 .home-nav:hover {
@@ -49,7 +49,7 @@ nav {
 
 .ingredient-nav {
   position: relative;
-  outline: 1px solid #EEBC70;
+  outline: 1px solid #eebc70;
   height: 100%;
   width: 18%;
   display: flex;
@@ -57,8 +57,8 @@ nav {
   align-items: center;
   margin-top: 1px;
   margin-left: 1px;
-  font-family : ITC Avant Garde Gothic Pro;
-  font-size : 1rem;
+  font-family: ITC Avant Garde Gothic Pro;
+  font-size: 1rem;
   color: white;
 }
 
@@ -69,7 +69,6 @@ nav {
 .ingredient-nav:hover {
   font-family: ITC Serif Gothic Std;
   font-size: 1.2rem;
-
 }
 
 .ingredient-nav:hover:before {
@@ -79,5 +78,5 @@ nav {
   left: 4px;
   right: 4px;
   bottom: 4px;
-  border: 1px #EEBC70 dotted;
+  border: 1px #eebc70 dotted;
 }

@@ -1,13 +1,12 @@
 .quote {
-  font-family :'Snell Roundhand', cursive;
+  font-family: "Snell Roundhand", cursive;
   font-weight: 500;
   font-size: 2.5em;
   color: #eebc70;
-  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
 }
 
 .author {
-  font-family : ITC Avant Garde Gothic Pro;
+  font-family: ITC Avant Garde Gothic Pro;
   font-style: italic;
   font-size: 1.5em;
 }
@@ -16,6 +15,6 @@
   background-color: rgba(255, 255, 255, 0.114);
   padding: 1em;
   border-radius: 3px;
-  border:#000 solid 1px;
+  border: #000 solid 1px;
   box-shadow: 10px 5px 5px#000;
 }
