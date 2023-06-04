@@ -34,10 +34,19 @@ describe("Drink Grid Gin", () => {
         body: {
           drinks: [
             {
-              strDrink: "69 Special",
-              strDrinkThumb:
-                "https://www.thecocktaildb.com/images/media/drink/vqyxqx1472669095.jpg",
-              idDrink: "13940",
+              "idDrink":"13940",
+              "strDrink":"69 Special",
+              "strCategory":"Ordinary Drink",
+              "strAlcoholic":"Alcoholic",
+              "strGlass":"Collins Glass",
+              "strInstructions":"Pour 2 oz. gin. Add 4 oz. 7-up. Add Lemon Juice for flavor. If you are weak, top up glass with more 7-Up.",
+              "strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/vqyxqx1472669095.jpg",
+              "strIngredient1":"Gin",
+              "strIngredient2":"7-Up",
+              "strIngredient3":"Lemon juice",
+              "strMeasure1":"2 oz dry ",
+              "strMeasure2":"4 oz ",
+              "strMeasure3":"0.75 oz ",
             },
           ],
         },
@@ -51,10 +60,18 @@ describe("Drink Grid Gin", () => {
         body: {
           drinks: [
             {
-              strDrink: "Alexander",
-              strDrinkThumb:
-                "https://www.thecocktaildb.com/images/media/drink/0clus51606772388.jpg",
-              idDrink: "11014",
+              "idDrink":"11014",
+              "strDrink":"Alexander",
+              "strGlass":"Cocktail glass",
+              "strInstructions":"Shake all ingredients with ice and strain contents into a cocktail glass. Sprinkle nutmeg on top and serve.",
+              "strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/0clus51606772388.jpg",
+              "strIngredient1":"Gin",
+              "strIngredient2":"Creme de Cacao",
+              "strIngredient3":"Light cream",
+              "strIngredient4":"Nutmeg",
+              "strMeasure1":"1\/2 oz ",
+              "strMeasure2":"1\/2 oz white ",
+              "strMeasure3":"2 oz ",
             },
           ],
         },

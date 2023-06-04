@@ -1,6 +1,6 @@
 import React from "react";
 import "./ErrorPage.css";
-import errorImage from "../../img/error-icon.svg";
+import errorImage from "../../Assets/error-icon.svg";
 import { NavLink } from "react-router-dom";
 
 interface ErrorProps {
