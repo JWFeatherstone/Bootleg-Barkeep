@@ -1,8 +1,10 @@
+/* text */
 .drink-title {
   text-align: center;
   margin-bottom: 0;
 }
 
+/* containers */
 .drink-wrapper {
   width: 100%;
   grid-column: 2 / 5;

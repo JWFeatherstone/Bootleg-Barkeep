@@ -6,16 +6,18 @@ import { HomeProps } from "src/Types/HomeProps";
 import { RandomQuote } from "../RandomQuote/RandomQuote";
 
 const Home: React.FC<HomeProps> = ({ randomDrink }) => {
-  const cleanedDrinkData = cleanDrinkData(randomDrink); 
+  const cleanedDrinkData = cleanDrinkData(randomDrink);
 
-  const randomDrinkInfo = cleanedDrinkData.map(({ drinkId, randomImg, title }) => (
-    <RandomDrink
-      idDrink={drinkId}
-      key={drinkId}
-      strDrinkThumb={randomImg}
-      strDrink={title}
-    />
-  ));
+  const randomDrinkInfo = cleanedDrinkData.map(
+    ({ drinkId, randomImg, title }) => (
+      <RandomDrink
+        idDrink={drinkId}
+        key={drinkId}
+        strDrinkThumb={randomImg}
+        strDrink={title}
+      />
+    )
+  );
 
   return (
     <section className="home-page">

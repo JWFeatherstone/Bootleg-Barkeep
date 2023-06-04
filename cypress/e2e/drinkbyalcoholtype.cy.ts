@@ -48,7 +48,7 @@ describe("Alcohol Grid Component", () => {
     cy.get(".home-nav").click();
     cy.wait("@randomDrink")
       .get("h2")
-      .should("contain", "Lucky Libations")
+      .should("contain", "LUCKY LIBATIONS")
       .get(".random-img")
       .should(
         "have.attr",
@@ -64,13 +64,13 @@ describe("Alcohol Grid Component", () => {
   it("should navigate back to the previous page when the back button is clicked", () => {
     cy.get(".ingredient-nav").eq(2).click();
     cy.wait("@fetchCocktails");
-  
+
     cy.get(".drink-title").should("contain", "Vodka");
-  
+
     cy.go("back");
-  
+
     cy.wait("@randomDrink");
-    cy.get("h2").should("contain", "Lucky Libations");
+    cy.get("h2").should("contain", "LUCKY LIBATIONS");
     cy.get(".random-img").should(
       "have.attr",
       "src",

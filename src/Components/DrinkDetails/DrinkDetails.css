@@ -1,59 +1,61 @@
 .drink-details {
-    grid-row: 2;
-    grid-column: 2/5;
-    border-radius: 3px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 2em;
-    justify-content: center;
+  grid-row: 2;
+  grid-column: 2/5;
+  border-radius: 3px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2em;
+  justify-content: center;
 }
 
 .left-side {
-    grid-column: 1;
+  grid-column: 1;
 }
 
 .right-side {
-    grid-column: 2;
+  grid-column: 2;
 }
 
-.right-side, .left-side {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.right-side,
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .prep-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background: rgb(24, 28, 30);
-    border: 1px solid rgb(238, 188, 112);
-    height: 22em;
-    padding: 1.8em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgb(24, 28, 30);
+  border: 1px solid rgb(238, 188, 112);
+  height: 22em;
+  padding: 1.8em 2em;
 }
 
 .prep-title {
-    color: whitesmoke;
-    font-family : ITC Avant Garde Gothic Pro;
-    margin: 0;
-    font-size: 1.5em;
+  color: whitesmoke;
+  font-family: ITC Avant Garde Gothic Pro;
+  margin: 0;
+  font-size: 1.5em;
 }
 
-.prep-subtitle, .prep-detail {
-    width: 100%;
-    text-align: left;
+.prep-subtitle,
+.prep-detail {
+  width: 100%;
+  text-align: left;
 }
 
 .prep-subtitle {
-    color:rgb(238, 188, 112);
-    padding-left: 1em;
-    margin-top: 1.3rem;
+  color: rgb(238, 188, 112);
+  padding-left: 1em;
+  margin-top: 1.3rem;
 }
 
 .prep-detail {
-    color: whitesmoke;
-    font-size: 0.8rem;
-    padding-left: 1.2em;
+  color: whitesmoke;
+  font-size: 0.8rem;
+  padding-left: 1.2em;
 }
