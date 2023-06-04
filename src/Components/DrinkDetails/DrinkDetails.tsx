@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import '../DrinkDetails/DrinkDetails.css';
+import "../DrinkDetails/DrinkDetails.css";
 import { fetchDetails } from "../API/apiCalls";
 import { DrinkDetailsProps, DrinkDetailsState } from "../../Types/Details";
 
@@ -17,6 +17,7 @@ class DrinkDetails extends Component<DrinkDetailsProps, DrinkDetailsState> {
         strMeasures: [],
         id: "",
       },
+      errorMsg: null, 
     };
   }
 
@@ -30,10 +31,17 @@ class DrinkDetails extends Component<DrinkDetailsProps, DrinkDetailsState> {
       .then((data) => {
         this.setState({
           drink: data,
+          errorMsg: null,
         });
       })
       .catch((error) => {
-        throw new Error("Error");
+        let errorMsg;
+        if (error instanceof Error) {
+          errorMsg = "Server error.";
+        } else {
+          errorMsg = "Unknown error.";
+        }
+        this.setState({ errorMsg });
       });
   }
 
