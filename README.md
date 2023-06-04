@@ -76,7 +76,7 @@ This web application was developed for the Turing School of Software and Design'
   - Ashlee Webb - [GitHub](https://github.com/AshleeAWebb) [LinkedIn](https://www.linkedin.com/in/ashlee-webb/)
   - John Featherstone - [GitHub](https://github.com/JWFeatherstone) [LinkedIn](https://www.linkedin.com/in/john-w-featherstone/)
 ## Illustrations
-This will be a gif
+![Demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWRiZGM1OGM0NmIwZDVlNjM0MTAyNGQ2YzdjNTk3OTE3OTE0NGQ4ZSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/hqlJ6D37T53SgL0E1Z/giphy.gif)
 ## Deployed Page
 Visit our deployed page [here](https://bootleg-barkeep.vercel.app/).
 ## Wins
