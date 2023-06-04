@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../DrinkDetails/DrinkDetails.css";
 import { fetchDetails } from "../API/apiCalls";
 import { DrinkDetailsProps, DrinkDetailsState } from "../../Types/Details";
+import { Redirect } from 'react-router-dom';
 
 class DrinkDetails extends Component<DrinkDetailsProps, DrinkDetailsState> {
   constructor(props: DrinkDetailsProps) {
@@ -26,23 +27,19 @@ class DrinkDetails extends Component<DrinkDetailsProps, DrinkDetailsState> {
   }
 
   getInfo() {
-    const { id } = this.props;
-    fetchDetails(id)
-      .then((data) => {
+     const { id } = this.props
+     fetchDetails(id).then((data) => {
         this.setState({
-          drink: data,
-          errorMsg: null,
-        });
+           drink: data
+        })
       })
       .catch((error) => {
-        let errorMsg;
         if (error instanceof Error) {
-          errorMsg = "Server error.";
+           this.setState({error: "Server error."});
         } else {
-          errorMsg = "Unknown error.";
+          this.setState({error: "Unknown error."});
         }
-        this.setState({ errorMsg });
-      });
+      })  
   }
 
   organizeIngredientsAndAmounts(): string[] {
@@ -65,6 +62,7 @@ class DrinkDetails extends Component<DrinkDetailsProps, DrinkDetailsState> {
     const ingredients: string[] = this.organizeIngredientsAndAmounts();
     const { id } = this.props;
     return (
+      this.state.error ? <Redirect push to="/error" /> :
       <div id={id} className="drink-details">
         <div className="left-side">
           <div id={id} className="drink-card">
